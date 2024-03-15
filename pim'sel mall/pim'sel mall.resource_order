@@ -30,6 +30,7 @@
     {"name":"Timelines","order":6,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"spr_customer1_walkleft","order":1,"path":"sprites/spr_customer1_walkleft/spr_customer1_walkleft.yy",},
     {"name":"Ads","order":1,"path":"notes/Ads/Ads.yy",},
     {"name":"Sprite_0004","order":1,"path":"sprites/Sprite_0004/Sprite_0004.yy",},
     {"name":"obj_employee","order":1,"path":"objects/obj_employee/obj_employee.yy",},
@@ -37,7 +38,6 @@
     {"name":"Employees","order":2,"path":"notes/Employees/Employees.yy",},
     {"name":"obj_button_startgame","order":1,"path":"objects/obj_button_startgame/obj_button_startgame.yy",},
     {"name":"obj_title","order":1,"path":"objects/obj_title/obj_title.yy",},
-    {"name":"obj_report","order":2,"path":"objects/obj_report/obj_report.yy",},
     {"name":"rm_title","order":1,"path":"rooms/rm_title/rm_title.yy",},
   ],
 }
