@@ -1,7 +1,7 @@
 {
   "resourceType": "GMNotes",
   "resourceVersion": "1.1",
-  "name": "Employees",
+  "name": "nt_Employees",
   "parent": {
     "name": "Notes",
     "path": "folders/Notes.yy",

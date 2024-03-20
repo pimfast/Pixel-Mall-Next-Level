@@ -1,7 +1,7 @@
 {
   "resourceType": "GMNotes",
   "resourceVersion": "1.1",
-  "name": "Ads",
+  "name": "nt_VIPs",
   "parent": {
     "name": "Notes",
     "path": "folders/Notes.yy",

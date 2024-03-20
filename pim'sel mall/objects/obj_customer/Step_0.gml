@@ -2,7 +2,7 @@
 
 switch (state) {
     case "entering":
-		x -= 1
+		x -= walksp
         break;
     default:
         // code here

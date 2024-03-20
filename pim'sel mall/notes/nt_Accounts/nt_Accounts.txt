@@ -1,0 +1,22 @@
+so on the main menu there'll be a button to the side that says "Login"
+unless you're already logged in which case it'll say "Account" and above that it
+says in little black text "Logged in as: >your name<"
+
+if you tap on login it will have two text boxes for filling in your username and password and beside that
+two more text boxes and uhhh register ehhh login/register ahhhh
+
+anyway you press on account and opens up a window,
+in the center left-ish maybe top-ish or just center it has your character doing 
+one of their animations (if they have one) and every 3 seconds it changes to another
+animation (if they have one)
+if you haven't designed a character yet it just appears as a checkerboard pattern
+
+anyway next to that thing is your name
+
+
+also:
+friends list
+delete account
+beside your username it has a little pencil button that lets you change your name and
+switch account maybe
+oh yeah and design customer

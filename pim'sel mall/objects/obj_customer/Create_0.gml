@@ -1,6 +1,13 @@
 /// @desc
 
 state = "entering"
+//states:
+//entering
+//waitingfor_shop
+//waitingfor_employee
+//halfleaving
+
+walksp = 1
 
 customertype = irandom(5)
 
