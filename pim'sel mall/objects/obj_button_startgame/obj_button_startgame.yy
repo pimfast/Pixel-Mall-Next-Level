@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_startday_button",
-    "path": "sprites/spr_startday_button/spr_startday_button.yy",
+    "name": "spr_start_button_temp",
+    "path": "sprites/spr_start_button_temp/spr_start_button_temp.yy",
   },
   "spriteMaskId": null,
   "visible": true,

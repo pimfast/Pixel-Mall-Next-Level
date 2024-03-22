@@ -15,5 +15,33 @@ if (file_exists("dontcheat.plz")) {
 	global.money = 1000
 	global.pixelmoney = 30
 	global.day = 1
-	global.shoptions = ["zk","medical","sports"] //zk, medical, sports, hnv, buy, w
+	global.shoptions = ["zk","zk","medical","sports"] //zk, medical, sports, hnv, buy, w
+	
+	global.zk01_lvl = 1
+	global.zk02_lvl = 0
+	global.zk03_lvl = 1
+	global.zk04_lvl = 0
+	
+	global.medical01_lvl = 1
+	global.medical02_lvl = 0
+	
+	global.sports01_lvl = 1
+	global.sports02_lvl = 0
+	
+	global.hnv01_lvl = -1
+	global.hnv02_lvl = -1
+	
+	global.buy01_lvl = -1
+	global.buy02_lvl = -1
+	
+	global.w01_lvl = -1
+	global.w02_lvl = -1
+	global.w03_lvl = -1
+	global.w04_lvl = -1
+	
+	global.elevator_lvl = 1
+	
+	global.counter_lvl = 1
+	
+	global.musicplayer_lvl = 0
 }

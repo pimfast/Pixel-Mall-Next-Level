@@ -17,6 +17,6 @@ anyway next to that thing is your name
 also:
 friends list
 delete account
-beside your username it has a little pencil button that lets you change your name and
-switch account maybe
+beside your username it has a little pencil button that lets you rename
+log out
 oh yeah and design customer
