@@ -7,6 +7,7 @@
     {"name":"Objects","order":7,"path":"folders/Objects.yy",},
     {"name":"Buttons","order":2,"path":"folders/Objects/Buttons.yy",},
     {"name":"Employees","order":5,"path":"folders/Objects/Employees.yy",},
+    {"name":"Mall Parts","order":6,"path":"folders/Objects/Mall Parts.yy",},
     {"name":"Room Specific","order":3,"path":"folders/Objects/Room Specific.yy",},
     {"name":"Particle Systems","order":13,"path":"folders/Particle Systems.yy",},
     {"name":"Paths","order":3,"path":"folders/Paths.yy",},
@@ -29,7 +30,6 @@
     {"name":"pixel mall guy","order":1,"path":"folders/Sprites/VIPs/pixel mall guy.yy",},
     {"name":"Tile Sets","order":1,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":6,"path":"folders/Timelines.yy",},
-    {"name":"Mall Parts","order":6,"path":"folders/Objects/Mall Parts.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_customer1_walkleft","order":1,"path":"sprites/spr_customer1_walkleft/spr_customer1_walkleft.yy",},
@@ -47,6 +47,7 @@
     {"name":"spr_reference_report","order":4,"path":"sprites/spr_reference_report/spr_reference_report.yy",},
     {"name":"obj_button_startgame","order":1,"path":"objects/obj_button_startgame/obj_button_startgame.yy",},
     {"name":"spr_login_temp","order":6,"path":"sprites/spr_login_temp/spr_login_temp.yy",},
+    {"name":"spr_reference_zk03lvl1","order":8,"path":"sprites/spr_reference_zk03lvl1/spr_reference_zk03lvl1.yy",},
     {"name":"obj_customer_tutorial","order":4,"path":"objects/obj_customer_tutorial/obj_customer_tutorial.yy",},
     {"name":"spr_login2_temp","order":5,"path":"sprites/spr_login2_temp/spr_login2_temp.yy",},
     {"name":"obj_button_account","order":2,"path":"objects/obj_button_account/obj_button_account.yy",},
