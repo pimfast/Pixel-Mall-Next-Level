@@ -1,5 +1,6 @@
 /// @desc
 
+//time go
 if (time_hours < 21) {time_seconds++}
 
 if (time_seconds >= 15) {time_seconds = 0; time_minutes++}
@@ -9,6 +10,7 @@ if (alarm_get(0) == -1) {
 	alarm_set(0,irandom_range(300,500))
 }
 
+//time stop
 if (time_hours >= 21) {
 	time = "End"
 } else {

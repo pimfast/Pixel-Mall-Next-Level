@@ -1,0 +1,28 @@
+Stores:
+
+clothing
+pharmacy
+sports
+music
+computer
+fast food
+casino
+café
+glasses
+toy
+card
+mask (sprite has reference to loz and gta (and sign could do something with phantom of the opera or v for vendetta or just comedy and tragedy masks))
+bicycle
+
+
+Special stores:
+restaurant (the customer sits. after some time they are ready to order, after more time they are done.)
+cons: we need to make a sit sprite for every customer  pros: we can use that for seating in the lobby too
+
+museum (the customer just walks around here for a bit. can handle multiple customers)
+cons: boring if it's the end of the day and the player is waiting for the customer to leave  pros: pretty cool
+
+this isn't a store but when the mall gets taller you could add a metro platform for more customers
+cons: it might not be possible for the player to handle more customers  pros: more customers
+
+indoor playground (upgraded versions give better ratings but the pay is always 0)
