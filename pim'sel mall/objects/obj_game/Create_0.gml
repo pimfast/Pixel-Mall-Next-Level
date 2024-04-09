@@ -5,8 +5,9 @@ time_minutes = 00
 time_seconds = 00
 time = string(time_hours)+":"+string(time_minutes)
 
-global.customerline = [noone,noone,noone,noone,noone]
+global.heldcustomer = noone
+global.customerline = [noone,noone,noone,noone,noone] //first position is the most left
+global.checkoutline = [noone,noone,noone,noone] //first position is the most right
+alarm_set(0,1)
 
-alarm_set(0,0)
-
-//current_day 
+//current_day

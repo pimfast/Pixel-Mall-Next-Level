@@ -1,3 +1,12 @@
+SWEET IDEA!!! max level employees can be toggled to enable or disable their helpful mode
+when in helping mode or whatever they will *not listen to orders*
+they will instead pick the first customer available and personally walk them to their desired store
+and then stay at the store with them until you tap the store to begin servicing the customer
+the customer moves on to the checkout and the employee moves on to help the next customer
+maybe help-mode employees will be at half-alpha during the day and show an icon at night to avoid confusion
+oh also this probably won't be an issue but just in case:
+you can't start the day without at least one non-helpful-mode employee
+
 Employees (in order of importance):
 
 pal: a yellow rabbit
@@ -10,6 +19,7 @@ ben: a ape/chimp
 buddy: a rabbi rabbit with glasses
 amigo: a bear
 homie: a horse
+lad: a scottish rabbit wtf! o m g ! !
 
 secret:
 gustavo fring (successfully serve both the walter white and jesse pinkman VIPs)

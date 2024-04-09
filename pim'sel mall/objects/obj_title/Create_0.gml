@@ -1,5 +1,9 @@
 /// @desc
 
+audio_group_load(ag_mus)
+audio_group_load(ag_sfx)
+audio_play_sound(mus_pixelmalltitlethemereal,100,1)
+
 //initiate
 
 var file
@@ -11,11 +15,11 @@ if (file_exists("dontcheat.plz")) {
 	file_text_close(file)
 } else {
 	global.level = 1 //max is 10
-	global.rating = 0.0
-	global.money = 1000
-	global.pixelmoney = 30
+	global.rating = 0
+	global.money = 400 //was 1000
+	global.pixelmoney = 20 //was 30
 	global.day = 1
-	global.shoptions = ["zk","zk","medical","sports"] //zk, medical, sports, hnv, buy, w
+	global.shoptions = [] //"zk","zk","medical","sports"//zk, medical, sports, hnv, buy, w
 	
 	global.zk01_lvl = 1
 	global.zk02_lvl = 0

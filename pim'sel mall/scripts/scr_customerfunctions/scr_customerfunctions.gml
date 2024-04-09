@@ -1,28 +1,47 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function addtofirstopenslot(customer) {
-	for (var i = 0; i < array_length(global.customerline); i++) {
-		if (global.customerline[i] == noone) {
-			global.customerline[i] = customer.id
+function lineonlycontains(value,line) {
+	for (var i = 0; i < array_length(line); i++) {
+		if (line[i] != value) {
+			return(false)
+		}
+	}
+	return(true)
+}
+
+function addtofirstopenslot(customer,line) {
+	for (var i = 0; i < array_length(line); i++) {
+		if (line[i] == noone) {
+			line[i] = customer.id
 			show_debug_message(customer.id)
 			break
 		}
 	}
 }
 
-function whereinlineami(customer) {
-	for (var i = 0; i < array_length(global.customerline); i++) {
-		if (global.customerline[i] == customer.id) {
+function addtolastopenslot(customer,line) {
+	for (var i = array_length(line); i > 0; i--) {
+		if (line[i] == noone) {
+			line[i] = customer.id
+			//show_debug_message(customer.id)
+			break
+		}
+	}
+}
+
+function whereinlineami(customer,line) {
+	for (var i = 0; i < array_length(line); i++) {
+		if (line[i] == customer.id) {
 			return(i);
 		}
 	}
 	return(false);
 }
 
-function outofline(customer) {
-	for (var i = 0; i < array_length(global.customerline); i++) {
-		if (global.customerline[i] == customer.id) {
-			global.customerline[i] = noone
+function outofline(customer,line) {
+	for (var i = 0; i < array_length(line); i++) {
+		if (line[i] == customer.id) {
+			line[i] = noone
 			break
 		}
 	}

@@ -2,10 +2,10 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_customerbubble_sports_urgent",
-  "bbox_bottom": 63,
-  "bbox_left": 7,
-  "bbox_right": 62,
-  "bbox_top": 3,
+  "bbox_bottom": 31,
+  "bbox_left": 3,
+  "bbox_right": 31,
+  "bbox_top": 1,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -17,7 +17,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 64,
+  "height": 32,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c9e91e6c-b0e5-46c0-9a14-8921c3d619c7","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 7,
   "parent": {
-    "name": "Customer Bubbles",
-    "path": "folders/Sprites/Customer Bubbles.yy",
+    "name": "Store Requests",
+    "path": "folders/Sprites/Customer Bubbles/Store Requests.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -54,13 +54,13 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ef2f3e89-5307-40e8-8f3f-f83d502124c0","path":"sprites/spr_customerbubble_sports_urgent/spr_customerbubble_sports_urgent.yy",},},},"Disabled":false,"id":"3581d1f1-7d93-4f38-89ea-5deefc44687b","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ef2f3e89-5307-40e8-8f3f-f83d502124c0","path":"sprites/spr_customerbubble_sports_urgent/spr_customerbubble_sports_urgent.yy",},},},"Disabled":false,"id":"605e619a-079f-427b-9e94-df70256c6632","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 32,
-    "yorigin": 64,
+    "xorigin": 16,
+    "yorigin": 32,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 64,
+  "width": 32,
 }

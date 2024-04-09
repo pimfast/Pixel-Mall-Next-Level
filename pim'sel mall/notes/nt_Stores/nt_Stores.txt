@@ -13,6 +13,9 @@ toy
 card
 mask (sprite has reference to loz and gta (and sign could do something with phantom of the opera or v for vendetta or just comedy and tragedy masks))
 bicycle
+hat
+mattress
+news (icon is papers and under the icon is a rectangular display that actually shows dynamic text that i get to write yipeee!)
 
 
 Special stores:
@@ -26,3 +29,7 @@ this isn't a store but when the mall gets taller you could add a metro platform 
 cons: it might not be possible for the player to handle more customers  pros: more customers
 
 indoor playground (upgraded versions give better ratings but the pay is always 0)
+
+janitors closet (does nothing. upgraded versions do more nothing)
+
+bathroom (customer can't go unless outside view. make sure you they're outta sight!)
