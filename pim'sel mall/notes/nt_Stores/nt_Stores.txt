@@ -16,7 +16,7 @@ bicycle
 hat
 mattress
 news (icon is papers and under the icon is a rectangular display that actually shows dynamic text that i get to write yipeee!)
-
+jewelry store
 
 Special stores:
 restaurant (the customer sits. after some time they are ready to order, after more time they are done.)

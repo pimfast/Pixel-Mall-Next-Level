@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_reference_zk03lvl1",
-    "path": "sprites/spr_reference_zk03lvl1/spr_reference_zk03lvl1.yy",
+    "name": "spr_store_zk03_lvl1",
+    "path": "sprites/spr_store_zk03_lvl1/spr_store_zk03_lvl1.yy",
   },
   "spriteMaskId": null,
   "visible": true,

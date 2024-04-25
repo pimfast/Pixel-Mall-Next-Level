@@ -7,33 +7,52 @@ maybe help-mode employees will be at half-alpha during the day and show an icon 
 oh also this probably won't be an issue but just in case:
 you can't start the day without at least one non-helpful-mode employee
 
-Employees (in order of importance):
+no... that's not a sweet idea. while it would make it easier for the user to not have to drag the
+customers anymore, doing so would ruin the picture-match gameplay that is at the core of the game loop
+all you would be doing at high levels of the game would be tapping ! bubbles. and that SUCKS and is BORING!
+i'm sure there's some way to scale it up even with a hundred employees but that there is not it
+
+Employees:
 
 pal: a yellow rabbit
 gal: an green rabbit
-fellow/chap: a blue butler rabbit wid a mustache
-squirt: a gen z-er rabbit
-champ: a rotund rabbit
-d*ck-sucker: idk i just wanna call one dicksucker
-ben: a ape/chimp
-buddy: a rabbi rabbit with glasses
-amigo: a bear
-homie: a horse
-lad: a scottish rabbit wtf! o m g ! !
+fellow/chap: a light-blue butler rabbit wid a mustache
+squirt: a red gen z-er rabbit (seems kinda indistinct, maybe not this one)
+champ: a purple rotund rabbit
+homie: a pink nerdy rabbit with big glasses
+amigo: a orange gruff rabbit with an afro
+buddy: a blue rabbi rabbit with little glasses
+(a lot of the names above aren't even synonyms for friend! what happened?)
+actually one of them should be a dog specifically a basset hound
 
-secret:
-gustavo fring (successfully serve both the walter white and jesse pinkman VIPs)
-jimmy fallon (nvm)
-fella: a gangster rabbit (play for a week straight)
-comrade: a goth rabbit (don't play for a week straight)
-chum: a fish rabbit (flood the mall)
-pal nega: shadow version of pal (complete 500 tasks with pal (or beat the pal nega EVIP if we're doing that idea))
-big chungus: as soon as you tap him he removes himself from the team and crashes the game (konami code)
+Secret/unlockable:
+gustavo fring: gus fring the human from breaking bad
+fella: a gangster rabbit
+comrade: a goth rabbit
+chum: a fish rabbit
+pal nega: a shadow version of pal
+chunky boy: big chungus
+companion: anxious rabbit 0,_ ⹁0
+mate: romantic rabbit
+associate: elite big-time rabbit with white-out glasses
+compadre: cowboy rabbit with a cowboy hat
 
-seasonal (idk about this idea tbh):
+Seasonal (idk about this idea tbh (maybe just be skins for existing characters?)):
 (play during halloween) zombunny
 (play during easter) easter bunny
 (play during christmas) elf-rabbit
 (play during sinterklaas) a non-racist peter-rabbit
 (play during peter rabbit's release anniversary) actual peter rabbit
 (play during this game's anniversary) pinata pal
+
+If the employees were to have unique abilities (which they might i think it's kinda cool):
+polish ability that increases a shop's value/rating the longer this employee stays there (resets when they leave)
+jump ability that lets the employee jump a floor if the selected store is on the floor right above or below
+drag.. something with being able to drag this employee specifically... maybe a teleport or something or not
+parrot ability that automatically carries the customer to where they need to go after done serving them
+speed ability when you hold down the employee for 1 second it will run super fast to the next store you tap
+swagger ability that gives the employee a permanent aura that speeds up employees in it's radius
+gun ability that lets you kill a customer.							i mean put them to sleep for 5 seconds
+mind control ability that makes it so customers they're serving (in stores) don't leave until you let them
+mind reading ability if this employee is working the counter then all new customers coming from there will show their desired store even before they get to the elevator
+money bags ability that gives lotsa money for serving a customer but also takes forever to do it

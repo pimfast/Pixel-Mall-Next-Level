@@ -5,8 +5,8 @@ if (string_count("urgent",string(sprite_index)) >= 1) {
 } else {
 	if (sprite_index == spr_customerbubble_waiting) || (sprite_index == spr_customerbubble_purchasing) {
 		scalerate = 0
-		//image_xscale = 1
-		//image_yscale = 1
+		image_xscale = 1
+		image_yscale = 1
 	} else {
 		scalerate = 0.5
 	}

@@ -2,7 +2,14 @@
 
 var elvposition = 31
 
+if (alarm[0] = -1) {
+	sprite_index = asset_get_index("spr_employee_"+name+"_idle")
+} else {
+	sprite_index = asset_get_index("spr_employee_"+name+"_busy")
+}
+
 if (target != noone) {
+	
 	var targetx = target.x
 	if (target != obj_counter.id) {
 		targetx = target.x-15
@@ -16,6 +23,7 @@ if (target != noone) {
 	//go to the place
 	if (targety == y) {
 		if (x < targetx) {
+			sprite_index = asset_get_index("spr_employee_"+name+"_walk")
 			if (x + walksp > targetx) {
 				x = targetx
 			} else {
@@ -23,6 +31,7 @@ if (target != noone) {
 			}
 		}
 		if (x > targetx) {
+			sprite_index = asset_get_index("spr_employee_"+name+"_walk")
 			if (x - walksp < targetx) {
 				x = targetx
 			} else {
@@ -43,6 +52,7 @@ if (target != noone) {
 	} else {
 		//walk to the elevator
 		if (x > elvposition) {
+			sprite_index = asset_get_index("spr_employee_"+name+"_walk")
 			if (x - walksp < elvposition) {
 				x = elvposition
 			} else {
@@ -50,6 +60,7 @@ if (target != noone) {
 			}
 		}
 		if (x < elvposition) {
+			sprite_index = asset_get_index("spr_employee_"+name+"_walk")
 			if (x + walksp > elvposition) {
 				x = elvposition
 			} else {
@@ -61,6 +72,7 @@ if (target != noone) {
 		if (x == elvposition) {
 			//if it's lower, go down the elevator
 			if (targety > y) {
+				sprite_index = asset_get_index("spr_employee_"+name+"_elevator")
 				if (y - elvsp > targety) {
 					y = targety
 				} else {
@@ -69,6 +81,7 @@ if (target != noone) {
 			}
 			//if it's higher, go up the elevator
 			if (targety < y) {
+				sprite_index = asset_get_index("spr_employee_"+name+"_elevator")
 				if (y - elvsp < targety) {
 					y = targety
 				} else {

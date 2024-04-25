@@ -1,14 +1,30 @@
 /// @desc
 
 if (beingmoved == true) {
-	x = mouse_x
-	y = mouse_y
+	var customerstore = instance_position(mouse_x,mouse_y,obj_shopparent)
+	if (customerstore != noone) {
+		if (desiredstore == customerstore.shoptype) && (customerstore.level >= 1) {
+			x = customerstore.x+15
+			y = customerstore.y
+		} else {
+			x = mouse_x
+			y = mouse_y
+		}
+	} else {
+		x = mouse_x
+		y = mouse_y
+	}
+	
 	if (alarm_get(0) != -1) {
 		alarm[0]++
 	}
 	if (alarm_get(1) != -1) {
 		alarm[1]++
 	}
+}
+
+if (shopped >= 1) && (substate != "upset") {
+	substate = "shopped"
 }
 
 //if (instance_exists(customerbubble)) {
@@ -20,7 +36,7 @@ switch (state) {
 	case "goingto_enter":
 		//walk to elevator
 		var spotinline = whereinlineami(self,global.customerline)
-		//v DOESN'T WORK BECAUSE 0 AND FALSE ARE THE SAME THING!!! DUHH!!!!
+		//v doesn't work because 0 and false are the same thing duh
 		//if (spotinline == false) {
 		//	break
 		//}
@@ -28,7 +44,7 @@ switch (state) {
 			x -= walksp
 		} else {
 			state = "waitingfor_shop"
-			sprite_index = asset_get_index("spr_"+class+"_"+customertype+"_idle")
+			sprite_index = asset_get_index("spr_"+class+"_"+customertype+"_idle_"+substate)
 			desiredstore = array_get(global.shoptions,irandom(array_length(global.shoptions)-1))
 			
 			customerbubble = instance_create_layer(x,y-40,"Instances",obj_customerbubble)
@@ -66,7 +82,7 @@ switch (state) {
 		customerbubble.sprite_index = spr_customerbubble_linefull
 		if (array_contains(global.checkoutline,noone)) {
 			state = "goingto_counter"
-			sprite_index = asset_get_index("spr_"+class+"_"+customertype+"_walk")
+			sprite_index = asset_get_index("spr_"+class+"_"+customertype+"_walk_"+substate)
 			addtofirstopenslot(self,global.checkoutline)
 			shopimat.serving = noone
 			shopimat = noone
@@ -75,10 +91,20 @@ switch (state) {
 	case "processing":
 		//do nothing. when employee is finished the state will be goingto_counter or goingto_exit
 		moveable = false
-		customerbubble.sprite_index = spr_customerbubble_purchasing
-		if (shopimat.myemployee.alarm[0] == -1) {
-			//start talking
-			shopimat.myemployee.alarm[0] = 240/shopimat.myemployee.servicesp
+		if (shopimat == obj_counter) {
+			if (shopimat.myemployee.alarm[0] == -1) {
+				//start talking
+				customerbubble.sprite_index = noone
+				audio_play_sound(sfx_pixelmall_cashier,1,0)
+				shopimat.myemployee.alarm[0] = 60/shopimat.myemployee.servicesp
+			}
+		} else {
+			if (shopimat.myemployee.alarm[0] == -1) {
+				//start talking
+				customerbubble.sprite_index = spr_customerbubble_purchasing
+				audio_play_sound(sfx_pixelmall_inStore,1,0)
+				shopimat.myemployee.alarm[0] = 180/shopimat.myemployee.servicesp
+			}
 		}
 		break;
 	case "goingto_counter":
@@ -86,9 +112,12 @@ switch (state) {
 		moveable = false
 		image_alpha = 0.5
 		customerbubble.sprite_index = noone
+		sprite_index = asset_get_index("spr_"+class+"_"+customertype+"_walk_"+substate)
 		
-		if (y == 468) {
-			var spotinline = whereinlineami(self,global.checkoutline)
+		if (y == 463) {
+			image_xscale = -1
+			
+			spotinline = whereinlineami(self,global.checkoutline)
 			if (x < (255-(32*spotinline))) {
 				x += walksp
 			} else {
@@ -109,15 +138,19 @@ switch (state) {
 						if (global.checkoutline[spotinline-1] == noone) {
 							global.checkoutline[spotinline-1] = self.id
 							global.checkoutline[spotinline] = noone
+							//wait does this code work well? i don't think it should
+							//but i haven't noticed anything wrong
 						}
 					}
 				}
-				sprite_index = asset_get_index("spr_"+class+"_"+customertype+"_idle")
 			}
 		} else {
 			if (x > 31) {
+				image_xscale = 1
 				x -= walksp
 			} else {
+				sprite_index = asset_get_index("spr_"+class+"_"+customertype+"_elevator_"+substate)
+				image_xscale = -1
 				y += elvsp
 			}
 		}
@@ -127,7 +160,7 @@ switch (state) {
 		moveable = false
 		instance_destroy(customerbubble)
 		image_alpha = 1
-		sprite_index = asset_get_index("spr_"+class+"_"+customertype+"_walk")
+		sprite_index = asset_get_index("spr_"+class+"_"+customertype+"_walk_"+substate)
 		if (lineonlycontains(noone,global.checkoutline)) {
 			//free the employee working at the checkout line
 			if (shopimat != noone) /*(!array_contains(global.checkoutline,obj_customer.id))*/ {
@@ -145,16 +178,20 @@ switch (state) {
 		outofline(self,global.customerline)
 		outofline(self,global.checkoutline)
 		
-		if (y == 468) {
+		if (y == 463) {
 			if (x < room_width) {
 				x += walksp
+				image_xscale = -1
 			} else {
 				instance_destroy()
 			}
 		} else {
 			if (x > 31) {
 				x -= walksp
+				image_xscale = 1
 			} else {
+				sprite_index = asset_get_index("spr_"+class+"_"+customertype+"_elevator_"+substate)
+				image_xscale = -1
 				y += elvsp
 			}
 		}

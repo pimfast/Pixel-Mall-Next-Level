@@ -14,7 +14,7 @@
   "option_spine_licence": false,
   "option_steam_app_id": "0",
   "option_template_description": "Hire and command staffs, and manage and upgrade the building to create the best mall the townsfolk has ever seen! Being a boss is really fun, but at the same time tough, too!\r\nPrepare to experience the UPS and DOWNS of business management!",
-  "option_template_icon": "${base_options_dir}/main/template_icon.png",
+  "option_template_icon": "template_icon.png",
   "option_template_image": "${base_options_dir}/main/template_image.png",
   "option_window_colour": 255,
 }

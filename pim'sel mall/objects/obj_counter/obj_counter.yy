@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_reference_counter",
-    "path": "sprites/spr_reference_counter/spr_reference_counter.yy",
+    "name": "spr_counter_01_lvl1",
+    "path": "sprites/spr_counter_01_lvl1/spr_counter_01_lvl1.yy",
   },
   "spriteMaskId": null,
   "visible": true,

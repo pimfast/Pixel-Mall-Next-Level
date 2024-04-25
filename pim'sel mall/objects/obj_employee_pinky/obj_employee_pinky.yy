@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_rupert",
-    "path": "sprites/spr_rupert/spr_rupert.yy",
+    "name": "spr_employee_pinky_idle",
+    "path": "sprites/spr_employee_pinky_idle/spr_employee_pinky_idle.yy",
   },
   "spriteMaskId": null,
   "visible": true,

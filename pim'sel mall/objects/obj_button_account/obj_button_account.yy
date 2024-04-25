@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Objects/Buttons.yy",
+    "name": "Title Buttons",
+    "path": "folders/Objects/Buttons/Title Buttons.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_account_button_temp",
-    "path": "sprites/spr_account_button_temp/spr_account_button_temp.yy",
+    "name": "spr_button_profile",
+    "path": "sprites/spr_button_profile/spr_button_profile.yy",
   },
   "spriteMaskId": null,
   "visible": true,

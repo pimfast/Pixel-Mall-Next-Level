@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Objects/Buttons.yy",
+    "name": "Game Buttons",
+    "path": "folders/Objects/Buttons/Game Buttons.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_start_button_temp",
-    "path": "sprites/spr_start_button_temp/spr_start_button_temp.yy",
+    "name": "spr_button_open",
+    "path": "sprites/spr_button_open/spr_button_open.yy",
   },
   "spriteMaskId": null,
   "visible": true,

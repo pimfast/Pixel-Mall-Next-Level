@@ -12,12 +12,12 @@
   "conversionMode": 0,
   "duration": 21.21143,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "real",
+    "path": "folders/Sounds/music/real.yy",
   },
   "preload": false,
   "sampleRate": 44100,
   "soundFile": "mus_pixelmalltitlethemereal.mp3",
   "type": 0,
-  "volume": 0.8,
+  "volume": 1.0,
 }

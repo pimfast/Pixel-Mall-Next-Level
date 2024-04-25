@@ -20,7 +20,6 @@ if (attending.serving.shopimat == obj_counter) {
 	attending.serving.shopped += 1
 	if (array_contains(global.checkoutline,noone)) {
 		attending.serving.state = "goingto_counter"
-		attending.serving.sprite_index = asset_get_index("spr_"+attending.serving.class+"_"+attending.serving.customertype+"_walk")
 		addtofirstopenslot(attending.serving,global.checkoutline)
 		attending.serving.shopimat = noone
 		attending.serving = noone

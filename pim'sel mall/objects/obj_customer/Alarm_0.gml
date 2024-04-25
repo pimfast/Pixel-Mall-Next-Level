@@ -1,7 +1,7 @@
 /// @desc losing patience...
 
 //if (!instance_exists(customerbubble)) {
-//	customerbubble = instance_create_layer(x+15,y-40,"Instances",obj_customerbubble)
+//	customerbubble = instance_create_layer(x,y-40,"Instances",obj_customerbubble)
 //}
 if (tutorialmode == false) {
 	if (customerbubble.sprite_index == spr_customerbubble_request) {

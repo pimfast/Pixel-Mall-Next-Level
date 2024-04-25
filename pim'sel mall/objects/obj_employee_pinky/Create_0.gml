@@ -5,3 +5,8 @@ elvsp = 2/**obj_elevator.spd*/
 servicesp = 1
 target = noone
 attending = noone
+
+myxspot = x
+myyspot = y
+
+name = "pinky"

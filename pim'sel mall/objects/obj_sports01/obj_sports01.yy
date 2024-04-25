@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_reference_sports01lvl1",
-    "path": "sprites/spr_reference_sports01lvl1/spr_reference_sports01lvl1.yy",
+    "name": "spr_store_sports01_lvl1",
+    "path": "sprites/spr_store_sports01_lvl1/spr_store_sports01_lvl1.yy",
   },
   "spriteMaskId": null,
   "visible": true,
