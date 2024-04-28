@@ -12,6 +12,7 @@ obj_button_pause.sprite_index = spr_button_back
 with (obj_employeeparent) {
 	x = myxspot
 	y = myyspot
+	target = noone
 }
 
 with (obj_shopparent) {
@@ -19,4 +20,8 @@ with (obj_shopparent) {
 		sprite_index = asset_get_index("spr_store_"+string(shopname)+"_lvl1")
 		image_alpha = 0.5
 	}
+	tobeattended = false
+	attended = false
+	myemployee = noone
+	serving = noone
 }
