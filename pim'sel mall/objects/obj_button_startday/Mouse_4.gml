@@ -1,5 +1,10 @@
 /// @desc
 
+global.todaysmoney = 0
+global.todaysratings = 0
+global.todayshappycustomers = 0
+global.todaysupsetcustomers = 0
+
 obj_game.time_hours = 09
 audio_group_stop_all(ag_mus)
 if (global.day % 2 == 0) {

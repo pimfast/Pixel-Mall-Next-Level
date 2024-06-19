@@ -52,6 +52,6 @@ switch (room) {
 		//more time = less alpha
 		//layer_background_alpha(layer_background_get_id(layer_get_id("Background_Day")),lerp(0, 1, time_hours))
 		layer_background_alpha(layer_background_get_id(layer_get_id("Background_Day")),background_day_alpha)
-		background_day_alpha -= 0.0001
+		if (time_hours >= 12) {background_day_alpha -= 0.000075}
 		break
 }

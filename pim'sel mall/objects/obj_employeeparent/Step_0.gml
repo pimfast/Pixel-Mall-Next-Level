@@ -11,8 +11,10 @@ if (alarm[0] = -1) {
 if (target != noone) {
 	
 	var targetx = target.x
-	if (target != obj_counter.id) {
-		targetx = target.x-15
+	if (instance_exists(obj_counter)) {
+		if (target != obj_counter.id) {
+			targetx = target.x-15
+		}
 	}
 	var targety = target.y
 	

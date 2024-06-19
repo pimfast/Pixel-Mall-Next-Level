@@ -7,5 +7,4 @@ if (shopimat != noone) {
 	shopimat.serving = noone
 	shopimat = noone
 }
-changemoney(-10)
-changerating(-0.1)
+changerating(-0.4)

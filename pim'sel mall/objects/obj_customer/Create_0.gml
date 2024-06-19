@@ -33,11 +33,15 @@ shopped = 0
 //shopstops = irandom_range(1,global.level)
 
 if (irandom(99) == 1) {
-	audio_play_sound(sfx_pixelmall_vip,1,0)
 	class = "vip"
-	customertype = "pixelmallguy"
 } else {
 	class = "customer"
+}
+
+if (class = "vip") {
+	audio_play_sound(sfx_pixelmall_vip,1,0)
+	customertype = getrandomvip()
+} else {
 	customertype = string(irandom(6)+1) //number between 1 and 7
 }
 sprite_index = asset_get_index("spr_"+class+"_"+customertype+"_walk_"+substate)

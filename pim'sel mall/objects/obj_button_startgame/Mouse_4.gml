@@ -1,9 +1,9 @@
 /// @desc
 
-global.level = 1 //max is 10
+global.level = 1 //max is 10 (for now muahahaha)
 global.rating = 0
-global.money = 400 //was 1000
-global.pixelmoney = 20 //was 30
+global.money = 400
+global.pixelmoney = 20
 global.day = 1
 
 global.mode = "game"

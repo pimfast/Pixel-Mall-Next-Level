@@ -28,8 +28,8 @@
   "nineSlice": null,
   "origin": 7,
   "parent": {
-    "name": "pixel mall guy",
-    "path": "folders/Sprites/VIPs/pixel mall guy.yy",
+    "name": "pixel mall guy (delete later)",
+    "path": "folders/Sprites/Customers/VIPs/pixel mall guy (delete later).yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

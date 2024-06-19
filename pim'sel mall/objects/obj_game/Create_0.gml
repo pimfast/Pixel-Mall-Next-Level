@@ -20,3 +20,5 @@ global.checkoutline = [noone,noone,noone,noone] //first position is the most rig
 background_day_alpha = 1
 
 //current_day
+
+moneychange = noone

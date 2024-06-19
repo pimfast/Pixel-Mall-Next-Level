@@ -1,0 +1,25 @@
+4v4 gamemode where each player controls a single employee. like puyo puyo tetris style but with more players
+
+3v3, 2v2, and 1v1 are also valid but if teams are uneven then you get paired with a bot
+
+try to earn the most money/ratings before time runs out!
+
+counter has a burnout mechanic where if you stay to long you get tired and you can't serve/serve slower
+
+cannons on the top of the level? slow aiming but if you do it right you can hit an enemy and slow them!
+
+can steal customers? send bad customers to the enemy?
+
+players can spend time advertising with a sign and dancing the better your dance is the more customers you get?
+
+setup screen lets you choose how many tall the mall is
+it takes the lowest level player and allows taller malls depending on if they reached the required level
+
+example:
+if the highest level player in the lobby is 53,
+and the lowest level player is 24,
+then the match level is set to 30
+and the height is limited to 3 screens tall
+(1-10 is one screen, 11-20 two screens, 21-30 three screens, etc.)
+
+there are never any locked stores, as every store within the playable space is level 1
