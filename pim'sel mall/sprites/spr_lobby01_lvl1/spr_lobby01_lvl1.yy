@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Background Assets",
-    "path": "folders/Sprites/Background Assets.yy",
+    "name": "Lobby",
+    "path": "folders/Sprites/Stores/Level 1-10/Lobby.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -1,4 +1,16 @@
-Stores:
+wreally good idea (and i mean it this time. this is better than the "helpful employee" one)
+once level 10 (and 20 and 30 etc.): every level 5 store in the section has a toggle which places them on
+a map in the lobby so that customers now walk to the store themselves.
+this is better than the auto-employee thing because it gives the player more agency to decide which store
+is the one they want to have auto-complete. you know what i mean.
+and the previous "the only thing you have left is tapping !'s" complaint is not really an issue 'cause
+it's waaayy unlikely you have all the stores at level 5 so you still got a lotta shit to do.
+what happens when one store is on the map but other stores of the same type aren't? well
+the customer simply waits for that store to be empty and if it is, they go to it.
+
+
+
+Store ideas:
 
 clothing
 pharmacy
@@ -18,7 +30,10 @@ mattress
 news (icon is papers and under the icon is a rectangular display that actually shows dynamic text that i get to write yipeee!)
 jewelry store
 
-Special stores:
+Special store ideas:
+there could be types of stores that can't be the last store customer visits before checkout so that they don't
+go to say a hair salon and come out with presents. although i think it also doesn't really matter. og has "w"!
+
 restaurant (the customer sits. after some time they are ready to order, after more time they are done.)
 cons: we need to make a sit sprite for every customer  pros: we can use that for seating in the lobby too
 

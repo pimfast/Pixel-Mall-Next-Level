@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Mall Parts",
-    "path": "folders/Objects/Mall Parts.yy",
+    "name": "Level 1-10",
+    "path": "folders/Objects/Mall Parts/Level 1-10.yy",
   },
   "parentObjectId": {
     "name": "obj_shopparent",

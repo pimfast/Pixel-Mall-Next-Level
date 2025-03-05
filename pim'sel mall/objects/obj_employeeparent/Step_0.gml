@@ -1,91 +1,101 @@
-/// @desc
+/// @desc move employee
 
-var elvposition = 31
+var _elvposition = 32
+var _employeename = string_delete(object_get_name(object_index),1,13)
 
 if (alarm[0] = -1) {
-	sprite_index = asset_get_index("spr_employee_"+name+"_idle")
+	sprite_index = asset_get_index("spr_employee_"+_employeename+"_idle")
 } else {
-	sprite_index = asset_get_index("spr_employee_"+name+"_busy")
+	sprite_index = asset_get_index("spr_employee_"+_employeename+"_busy")
+	if (attending == obj_counter.id) {
+		image_xscale = -1
+	} else {
+		image_xscale = 1
+	}
 }
 
 if (target != noone) {
 	
-	var targetx = target.x
+	var _targetx = target.x
 	if (instance_exists(obj_counter)) {
 		if (target != obj_counter.id) {
-			targetx = target.x-15
+			_targetx = target.x-15
+		} else {
+			_targetx = target.x+5
 		}
 	}
-	var targety = target.y
+	var _targety = target.y
 	
-	if (target.serving != noone) && (target.serving.state != "waitingfor_checkoutline") {
+	if (target.serving != noone) && (target.serving.state == "waitingfor_employee") && (target.serving.state != "waitingfor_shop") {
 		target.tobeattended = true
 		attending = target.id
 	}
-	//go to the place
-	if (targety == y) {
-		if (x < targetx) {
-			sprite_index = asset_get_index("spr_employee_"+name+"_walk")
-			if (x + walksp > targetx) {
-				x = targetx
+	//walk to the place, and do stuff when getting there.
+	if (_targety == y) {
+		if (x < _targetx) {
+			sprite_index = asset_get_index("spr_employee_"+_employeename+"_walk")
+			if (x + walksp > _targetx) {
+				x = _targetx
 			} else {
 				x += walksp
 			}
 		}
-		if (x > targetx) {
-			sprite_index = asset_get_index("spr_employee_"+name+"_walk")
-			if (x - walksp < targetx) {
-				x = targetx
+		if (x > _targetx) {
+			sprite_index = asset_get_index("spr_employee_"+_employeename+"_walk")
+			if (x - walksp < _targetx) {
+				x = _targetx
 			} else {
 				x -= walksp
 			}
 		}
-		if (x == targetx) {
+		//when reaching the destination, do some shit
+		if (x == _targetx) {
 			target.attended = true
-			if (target.serving != noone) && (target.serving.state != "waitingfor_checkoutline") {
+			if (target.serving != noone) && (target.serving.state != "waitingfor_checkoutline") && (target.serving.state != "waitingfor_shop") {
 				target.tobeattended = false
 			} else {
-				//if there's noone here, i ain't busy
+				//if there's noone here, i ain't busy NOT FUCKING TRUE --PIM but isn't it though? --pim
 				attending = noone
 				target.attended = false
+				target.myemployee = noone
 			}
 			target = noone
 		}
 	} else {
 		//walk to the elevator
-		if (x > elvposition) {
-			sprite_index = asset_get_index("spr_employee_"+name+"_walk")
-			if (x - walksp < elvposition) {
-				x = elvposition
+		if (x > _elvposition) {
+			sprite_index = asset_get_index("spr_employee_"+_employeename+"_walk")
+			if (x - walksp < _elvposition) {
+				x = _elvposition
 			} else {
 				x -= walksp
 			}
 		}
-		if (x < elvposition) {
-			sprite_index = asset_get_index("spr_employee_"+name+"_walk")
-			if (x + walksp > elvposition) {
-				x = elvposition
+		if (x < _elvposition) {
+			sprite_index = asset_get_index("spr_employee_"+_employeename+"_walk")
+			if (x + walksp > _elvposition) {
+				x = _elvposition
 			} else {
 				x += walksp
 			}
 		}
 		
 		//go up or down the elevator
-		if (x == elvposition) {
+		if (x == _elvposition) {
 			//if it's lower, go down the elevator
-			if (targety > y) {
-				sprite_index = asset_get_index("spr_employee_"+name+"_elevator")
-				if (y - elvsp > targety) {
-					y = targety
+			if (_targety > y) {
+				sprite_index = asset_get_index("spr_employee_"+_employeename+"_elevator")
+				if (y - elvsp > _targety) {
+					y = _targety
 				} else {
 					y += elvsp
 				}
 			}
 			//if it's higher, go up the elevator
-			if (targety < y) {
-				sprite_index = asset_get_index("spr_employee_"+name+"_elevator")
-				if (y - elvsp < targety) {
-					y = targety
+			if (_targety < y) {
+				sprite_index = asset_get_index("spr_employee_"+_employeename+"_elevator")
+				if (y - elvsp < _targety) {
+					y = _targety
 				} else {
 					y -= elvsp
 				}

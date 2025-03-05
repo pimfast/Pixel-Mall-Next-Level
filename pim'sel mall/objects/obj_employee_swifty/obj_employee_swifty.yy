@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Employees",
-    "path": "folders/Objects/Employees.yy",
+    "name": "Level 1-10",
+    "path": "folders/Objects/Employees/Level 1-10.yy",
   },
   "parentObjectId": {
     "name": "obj_employeeparent",

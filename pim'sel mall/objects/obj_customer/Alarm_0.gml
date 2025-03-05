@@ -10,4 +10,7 @@ if (tutorialmode == false) {
 		customerbubble.sprite_index = asset_get_index("spr_customerbubble_"+string(desiredstore)+"_urgent")
 	}
 	alarm_set(1,360)
+	if (class == "vip") {
+		alarm_set(1,alarm_get(1)/2)
+	}
 }

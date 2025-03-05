@@ -4,16 +4,18 @@
   "name": "obj_button_startupgrade",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Game Buttons",
-    "path": "folders/Objects/Buttons/Game Buttons.yy",
+    "name": "Report",
+    "path": "folders/Objects/UI/Report.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_buttonparent",
+    "path": "objects/obj_buttonparent/obj_buttonparent.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

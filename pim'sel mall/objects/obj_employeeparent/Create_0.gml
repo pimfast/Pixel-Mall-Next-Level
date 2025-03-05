@@ -1,12 +1,13 @@
 /// @desc
 
-walksp = 1
-elvsp = 2/**obj_elevator.spd*/
-servicesp = 1
-target = noone
-attending = noone
-
-myxspot = x
-myyspot = y
+level = 0
 
 name = ""
+walksp = 2
+servicesp = 1
+
+elvsp = 2/**obj_elevator.spd*/
+target = noone
+attending = noone
+myxspot = x
+myyspot = y

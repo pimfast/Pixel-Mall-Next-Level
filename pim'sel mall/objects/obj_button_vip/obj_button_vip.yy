@@ -4,14 +4,18 @@
   "name": "obj_button_vip",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
     "name": "Debug",
-    "path": "folders/Objects/Buttons/Debug.yy",
+    "path": "folders/Objects/UI/Game Buttons/Debug.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_buttonparent",
+    "path": "objects/obj_buttonparent/obj_buttonparent.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

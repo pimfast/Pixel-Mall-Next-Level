@@ -3,17 +3,23 @@
 if (string_count("urgent",string(sprite_index)) >= 1) {
 	scalerate = 1
 } else {
-	if (sprite_index == spr_customerbubble_waiting) || (sprite_index == spr_customerbubble_purchasing) {
+	if (sprite_index == spr_customerbubble_purchasing) || (sprite_index == spr_customerbubble_waiting) || (sprite_index == spr_customerbubble_linefull) || (sprite_index == spr_customerbubble_linefull_urgent) {
 		scalerate = 0
 		image_xscale = 1
 		image_yscale = 1
+		if (sprite_index == spr_customerbubble_waiting) || (sprite_index == spr_customerbubble_linefull) ||(sprite_index == spr_customerbubble_linefull_urgent) {
+			if (dir == "up") {ypos -= 0.2}
+			if (dir == "down") {ypos += 0.2}
+			if (ypos <= -42) {dir = "down"}
+			if (ypos >= -38) {dir = "up"}
+		}
 	} else {
 		scalerate = 0.5
 	}
 }
 
 x = thinker.x
-y = thinker.y-40
+y = thinker.y+ypos
 
 if (go == "big") {
 	image_xscale += (0.1*scalerate)

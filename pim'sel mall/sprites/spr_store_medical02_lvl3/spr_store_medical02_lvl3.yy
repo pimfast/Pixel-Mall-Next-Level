@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "Stores",
-    "path": "folders/Sprites/Stores.yy",
+    "name": "pharmacy",
+    "path": "folders/Sprites/Stores/Level 1-10/pharmacy.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

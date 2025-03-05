@@ -46,8 +46,3 @@ function outofline(customer,line) {
 		}
 	}
 }
-
-function getrandomvip() {
-	var chosenvip = irandom(0)
-	if (chosenvip = 0) {return "pixelmallguy"} //replace later
-}

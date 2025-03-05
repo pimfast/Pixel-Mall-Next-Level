@@ -23,10 +23,3 @@ if (serving != noone) {
 		audio_play_sound(sfx_pixelmall_dragStart,1,0)
 	}
 }
-
-	//change this code (later muahaha) to make it first check for the closest employees on the same floor
-	//BEFORE checking for the general nearest employees
-	//actually maybe instead make a pathfinding system? because
-	//if you just check for whats closest it might pick the employee directly above
-	//the store even if there's an employee closer to the elevator that would be a better choice
-	//so yeah, pathfinding system... if only i knew how to make one of those...

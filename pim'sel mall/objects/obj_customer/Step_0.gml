@@ -3,18 +3,18 @@
 if (beingmoved == true) {
 	var customerstore = instance_position(mouse_x,mouse_y,obj_shopparent)
 	if (customerstore != noone) {
-		if (desiredstore == customerstore.shoptype) && (customerstore.level >= 1) {
+		if (desiredstore == customerstore.shoptype) && (customerstore.level >= 1) && (customerstore.serving == noone) {
 			x = customerstore.x+15
 			y = customerstore.y
 		} else {
 			x = mouse_x
-			y = mouse_y
+			y = mouse_y+15
 		}
 	} else {
 		x = mouse_x
-		y = mouse_y
+		y = mouse_y+15
 	}
-	
+	//delay upsettation while held
 	if (alarm_get(0) != -1) {
 		alarm[0]++
 	}
@@ -23,14 +23,16 @@ if (beingmoved == true) {
 	}
 }
 
-if (shopped >= 1) && (substate != "upset") {
-	substate = "shopped"
-}
+//if (shopped >= 1) && (substate != "upset") {
+//	substate = "shopped"
+//}
 
 //if (instance_exists(customerbubble)) {
 //	customerbubble.x = x
 //	customerbubble.y = y-40
 //}
+
+var _elvposition = 32
 
 switch (state) {
 	case "goingto_enter":
@@ -47,10 +49,13 @@ switch (state) {
 			sprite_index = asset_get_index("spr_"+class+"_"+customertype+"_idle_"+substate)
 			desiredstore = array_get(global.shoptions,irandom(array_length(global.shoptions)-1))
 			
-			customerbubble = instance_create_layer(x,y-40,"Instances",obj_customerbubble)
+			customerbubble = instance_create_layer(x,y-40,"Game",obj_customerbubble)
 			customerbubble.sprite_index = asset_get_index("spr_customerbubble_"+string(desiredstore))
 			customerbubble.thinker = self.id
 			alarm_set(0,360)
+			if (class == "vip") {
+				alarm_set(0,alarm_get(0)/2)
+			}
 			alarm[1] = -1
 		}
 		break;
@@ -89,7 +94,7 @@ switch (state) {
 		}
 		break;
 	case "processing":
-		//do nothing. when employee is finished the state will be goingto_counter or goingto_exit
+		//do nothing. when employee is finished the state will be goingto_counter, goingto_exit, or waitingfor_employee
 		moveable = false
 		if (shopimat == obj_counter) {
 			if (shopimat.myemployee.alarm[0] == -1) {
@@ -145,7 +150,7 @@ switch (state) {
 				}
 			}
 		} else {
-			if (x > 31) {
+			if (x > _elvposition) {
 				image_xscale = 1
 				x -= walksp
 			} else {
@@ -170,23 +175,24 @@ switch (state) {
 			
 				//mark the checkout as not attended by employee
 				shopimat.attended = false
+				shopimat.myemployee = noone
 			}
 			shopimat = noone
 		}
 		
-		//remove self from customerline and checkoutline
+		//remove self from checkoutline and customerline in case of early anger
 		outofline(self,global.customerline)
 		outofline(self,global.checkoutline)
 		
 		if (y == 463) {
-			if (x < room_width) {
+			if (x < room_width+20) {
 				x += walksp
 				image_xscale = -1
 			} else {
 				instance_destroy()
 			}
 		} else {
-			if (x > 31) {
+			if (x > _elvposition) {
 				x -= walksp
 				image_xscale = 1
 			} else {

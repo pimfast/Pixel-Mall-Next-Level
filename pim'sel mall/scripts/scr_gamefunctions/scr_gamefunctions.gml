@@ -1,73 +1,98 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function changemoney(moneystatement) {
-	var moneybeforestatement = global.money
-	global.money += moneystatement
-	if (global.money < 0) {
-		global.money = 0
+function startday() {
+	global.todaysmoney = 0
+	global.todaysrating = 0
+	global.todayshappycustomers = 0
+	global.todaysupsetcustomers = 0
+	
+	obj_game.startofdaymoney = global.money
+	obj_game.startofdayrating = global.rating
+	
+	obj_game.time_hours = 09
+	audio_group_stop_all(ag_mus)
+	if (global.day % 2 == 0) {
+		audio_play_sound(mus_pixelmall_gameplay2,100,1)
+	} else {
+		audio_play_sound(mus_pixelmall_gameplay1,100,1)
 	}
 	
-	//draw number text
-	if (global.mode == "game") {
-		var drawpoint = instance_create_layer(138,30,"UI_Instances",obj_drawpoint)
-		drawpoint.drawnumber = (global.money - moneybeforestatement)
-		if (moneystatement > 0) {drawpoint.txtcol = c_lime}
-		if (moneystatement < 0) {drawpoint.txtcol = c_red}
+	//i think
+	with (obj_shopparent) {
+		if (level <= -2) {
+			image_alpha = 1
+			sprite_index = noone
+		}
+		if (level == -1) {
+			image_alpha = 1
+			sprite_index = lvlminus1sprite
+		}
+		if (level == 0) {
+			image_alpha = 1
+			sprite_index = lvl0sprite
+		}
+		if (level >= 1) {
+			if (object_get_name(object_index) != "obj_counter") {
+				array_push(global.shoptions,string_letters(shopname))
+			}
+		}
+		serving = noone
+		attended = false
+		tobeattended = false
 	}
+	with (obj_employeeparent) {
+		if (level < 0) {
+			
+		}
+		if (level == 0) {
+			
+		}
+	}
+	instance_destroy(obj_button_startday)
+	obj_game.background_day_alpha = 1
+	obj_button_pause.sprite_index = spr_button_pause
+	global.mode = "game"
 }
 
-function changerating(ratingstatement) {
-	var ratingbeforestatement = global.rating
-	global.rating += ratingstatement
-	if (global.rating < 0.0) {
-		global.rating = 0.0
-	}
+function startnight() {
 	
-	if (global.mode == "game") {
-		var drawpoint = instance_create_layer(75,30,"UI_Instances",obj_drawpoint)
-		drawpoint.drawnumber = (global.rating - ratingbeforestatement)
-		if (ratingstatement > 0) {drawpoint.txtcol = c_lime}
-		if (ratingstatement < 0) {drawpoint.txtcol = c_red}
+	audio_group_stop_all(ag_mus)
+	audio_play_sound(mus_pixelmall_upgrade,100,1)
+	
+	//i still think
+	with (obj_shopparent) {
+		if (object_get_name(object_index) != "obj_counter") {
+			if (level <= -2) {
+				image_alpha = 1
+				sprite_index = noone
+			}
+			if (level == -1) {
+				image_alpha = 1
+				sprite_index = lvlminus1sprite
+			}
+			if (level == 0) {
+				image_alpha = 0.5
+				sprite_index = asset_get_index("spr_store_"+string(shopname)+"_lvl1")
+			}
+			if (level >= 1) {
+				image_alpha = 1
+				sprite_index = asset_get_index("spr_store_"+string(shopname)+"_lvl"+string(level))
+			}
+		}
+		tobeattended = false
+		attended = false
+		myemployee = noone
+		serving = noone
 	}
-}
-
-function levelup(playerlevel) {
-	switch (playerlevel) {
-		case 1:
-			//default start with 4 owned and 4 available for purchase
-			break;
-		case 2:
-			//nothing? maybe more pixelmoney?
-			global.pixelmoney += 50
-			break;
-		case 3:
-			obj_hnv01.level = 0
-			break;
-		case 4:
-			obj_buy01.level = 0
-			break;
-		case 5:
-			obj_hnv02.level = 0
-			break;
-		case 6:
-			obj_buy02.level = 0
-			break;
-		case 7:
-			obj_w01.level = 0
-			break;
-		case 8:
-			obj_w02.level = 0
-			break;
-		case 9:
-			obj_w03.level = 0
-			break;
-		case 10:
-			obj_w04.level = 0
-			break;
-		default:
-			// code here
-			break;
+	with (obj_employeeparent) {
+		x = myxspot
+		y = myyspot
+		target = noone
 	}
+	instance_create_layer(room_width/2,room_height-64,"Instances",obj_button_startday)
+	obj_game.background_day_alpha = 0
+	obj_button_pause.sprite_index = spr_button_back
+	global.mode = "upgrade"
 }
 
 /// instance_nth_nearest(x,y,obj,n)
@@ -81,6 +106,7 @@ function levelup(playerlevel) {
 //
 /// GMLscripts.com/license
 //for store
+
 function findclosestemployee(pointx,pointy,object,n) {
     n = min(max(1,n),instance_number(object));
     list = ds_priority_create();

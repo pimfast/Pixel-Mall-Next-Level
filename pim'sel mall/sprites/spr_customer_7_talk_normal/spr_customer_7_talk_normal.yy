@@ -26,7 +26,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4864ad38-89d5-4d55-8a26-02f72262f9c9","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 7,
+  "origin": 9,
   "parent": {
     "name": "Customer 7",
     "path": "folders/Sprites/Customers/Customer 7.yy",
@@ -65,7 +65,7 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 14,
+    "xorigin": 20,
     "yorigin": 33,
   },
   "swatchColours": null,

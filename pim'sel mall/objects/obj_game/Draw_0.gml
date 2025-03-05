@@ -3,12 +3,12 @@
 switch (room) {
 	case rm_title:
 		draw_set_font(fnt_2)
-		draw_set_halign(fa_left)
-		draw_set_valign(fa_top)
+		draw_set_halign(fa_center)
+		draw_set_valign(fa_middle)
 		draw_set_color(c_white)
-		draw_text(230,322,"Play")
-		draw_text(38,345,20)
-		draw_text(5,385,">name<")
+		draw_text(253,335,"Play")
+		draw_text(53,359,global.pixelmoney)
+		draw_text(53,401,"Guest")
 		break
 	case rm_game:
 		draw_set_font(fnt_1)

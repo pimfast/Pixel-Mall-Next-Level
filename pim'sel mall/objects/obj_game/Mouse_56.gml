@@ -1,4 +1,4 @@
-/// @desc
+/// @desc drag customers
 
 if (global.heldcustomer != noone) {
 	global.heldcustomer.beingmoved = false
@@ -10,6 +10,10 @@ if (global.heldcustomer != noone) {
 	if (customerstore != noone) {
 		if (global.heldcustomer.desiredstore == customerstore.shoptype) && (customerstore.level >= 1) {
 			if (customerstore.serving == noone) {
+				if (global.heldcustomer.shopimat != noone) {
+					global.heldcustomer.shopimat.serving = noone
+				}
+				
 				audio_play_sound(sfx_pixelmall_dragSnap,1,0)
 				audio_play_sound(sfx_pixelmall_dragSuccess,1,0)
 				global.heldcustomer.x = customerstore.x+15
@@ -25,22 +29,37 @@ if (global.heldcustomer != noone) {
 				global.heldcustomer.customerbubble.sprite_index = spr_customerbubble_request
 				global.heldcustomer.state = "waitingfor_employee"
 			} else {
-				//make error sound, return to spot in line (oh shit this isn't gonna work when we let the customer visit multiple stores)
+				//make error sound, return to previous place
 				audio_play_sound(sfx_pixelmall_dragCancel,1,0)
+				if (global.heldcustomer.shopimat != noone) {
+					global.heldcustomer.x = global.heldcustomer.shopimat.x+15
+					global.heldcustomer.y = global.heldcustomer.shopimat.y
+				} else {
+					global.heldcustomer.x = 70+32*(whereinlineami(global.heldcustomer,global.customerline))
+					global.heldcustomer.y = 463
+				}
+			}
+		} else {
+			//make error sound, return to previous place
+			audio_play_sound(sfx_pixelmall_dragCancel,1,0)
+			if (global.heldcustomer.shopimat != noone) {
+				global.heldcustomer.x = global.heldcustomer.shopimat.x+15
+				global.heldcustomer.y = global.heldcustomer.shopimat.y
+			} else {
 				global.heldcustomer.x = 70+32*(whereinlineami(global.heldcustomer,global.customerline))
 				global.heldcustomer.y = 463
 			}
+		}
+	} else {
+		//make error sound, return to previous place
+		audio_play_sound(sfx_pixelmall_dragCancel,1,0)
+		if (global.heldcustomer.shopimat != noone) {
+			global.heldcustomer.x = global.heldcustomer.shopimat.x+15
+			global.heldcustomer.y = global.heldcustomer.shopimat.y
 		} else {
-			//make error sound, return to spot in line (oh shit this isn't gonna work when we let the customer visit multiple stores)
-			audio_play_sound(sfx_pixelmall_dragCancel,1,0)
 			global.heldcustomer.x = 70+32*(whereinlineami(global.heldcustomer,global.customerline))
 			global.heldcustomer.y = 463
 		}
-	} else {
-		//return to spot in line (oh shit this isn't gonna work when we let the customer visit multiple stores)
-		audio_play_sound(sfx_pixelmall_dragCancel,1,0)
-		global.heldcustomer.x = 70+32*(whereinlineami(global.heldcustomer,global.customerline))
-		global.heldcustomer.y = 463
 	}
 	global.heldcustomer = noone
 }

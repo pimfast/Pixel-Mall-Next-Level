@@ -9,9 +9,12 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Title Buttons",
-    "path": "folders/Objects/Buttons/Title Buttons.yy",
+    "path": "folders/Objects/UI/Title Buttons.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_buttonparent",
+    "path": "objects/obj_buttonparent/obj_buttonparent.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

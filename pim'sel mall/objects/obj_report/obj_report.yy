@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Game Buttons",
-    "path": "folders/Objects/Buttons/Game Buttons.yy",
+    "name": "Report",
+    "path": "folders/Objects/UI/Report.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_pixelmall_ui_report_bg",
-    "path": "sprites/spr_pixelmall_ui_report_bg/spr_pixelmall_ui_report_bg.yy",
+    "name": "spr_report_bg",
+    "path": "sprites/spr_report_bg/spr_report_bg.yy",
   },
   "spriteMaskId": null,
   "visible": true,

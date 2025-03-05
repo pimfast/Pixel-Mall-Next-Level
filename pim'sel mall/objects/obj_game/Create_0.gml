@@ -19,6 +19,11 @@ global.checkoutline = [noone,noone,noone,noone] //first position is the most rig
 //buhhh...
 background_day_alpha = 1
 
+startofdaymoney = 0
+startofdayrating = 0
+
 //current_day
 
 moneychange = noone
+
+global.debugmode = false

@@ -26,7 +26,7 @@
   "origin": 9,
   "parent": {
     "name": "Pinky",
-    "path": "folders/Sprites/Employees/Pinky.yy",
+    "path": "folders/Sprites/Employees/Level 1-10/Pinky.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

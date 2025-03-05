@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "sfx_PixelMall_Consumables_SFX",
+  "name": "sfx_pixelmall_Consumables_SFX",
   "audioGroupId": {
     "name": "ag_sfx",
     "path": "audiogroups/ag_sfx",
@@ -12,12 +12,12 @@
   "conversionMode": 0,
   "duration": 1.069252,
   "parent": {
-    "name": "sfx",
-    "path": "folders/Sounds/sfx.yy",
+    "name": "og",
+    "path": "folders/Sounds/sfx/og.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "sfx_PixelMall_Consumables_SFX.ogg",
+  "soundFile": "sfx_pixelmall_Consumables_SFX.ogg",
   "type": 0,
   "volume": 1.0,
 }

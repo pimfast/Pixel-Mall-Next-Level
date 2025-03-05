@@ -1,0 +1,8 @@
+MAKE IT SO TAPPING *ANY* OBJECT DURING UPGRADE TIME WILL TRY TO UPGRADE IT
+except for objects on the UI_Instances layer. also turn the lobby object into an asset
+
+SET UP THE MUSIC PLAYER
+find out exactly how long it's supposed to keep customers happy
+
+MAKE THE SECOND STAGE
+it's gonna have bunny rabbits
