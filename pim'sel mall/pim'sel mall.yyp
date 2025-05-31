@@ -578,8 +578,8 @@
     {"roomId":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
     {"roomId":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
     {"roomId":{"name":"rm_game_vs","path":"rooms/rm_game_vs/rm_game_vs.yy",},},
-    {"roomId":{"name":"rm_nightmare","path":"rooms/rm_nightmare/rm_nightmare.yy",},},
     {"roomId":{"name":"rm_game_tempblueprint","path":"rooms/rm_game_tempblueprint/rm_game_tempblueprint.yy",},},
+    {"roomId":{"name":"rm_nightmare","path":"rooms/rm_nightmare/rm_nightmare.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [

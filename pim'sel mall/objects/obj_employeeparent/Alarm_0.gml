@@ -22,8 +22,8 @@ if (attending.serving.shopimat == obj_counter) {
 	//}
 } else {
 	//get them to the counter/ready for the next store
-	attending.serving.billmoney += (attending.level*10)//attending.servicecharge
-	attending.serving.billrating += (0.1)//attending.servicecharge
+	attending.serving.billmoney += attending.servicecharge
+	attending.serving.billrating += attending.servicecharge
 	attending.serving.shopstops -= 1
 
 	if (attending.serving.shopstops <= 0) {
