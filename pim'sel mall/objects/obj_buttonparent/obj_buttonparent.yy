@@ -1,9 +1,9 @@
 {
-  "resourceType": "GMObject",
-  "resourceVersion": "1.0",
-  "name": "obj_buttonparent",
+  "$GMObject": "",
+  "%Name": "obj_buttonparent",
   "eventList": [],
   "managed": true,
+  "name": "obj_buttonparent",
   "overriddenProperties": [],
   "parent": {
     "name": "UI",
@@ -24,6 +24,8 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [],
+  "resourceType": "GMObject",
+  "resourceVersion": "2.0",
   "solid": false,
   "spriteId": null,
   "spriteMaskId": null,

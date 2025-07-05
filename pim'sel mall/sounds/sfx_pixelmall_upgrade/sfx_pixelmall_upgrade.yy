@@ -1,7 +1,6 @@
 {
-  "resourceType": "GMSound",
-  "resourceVersion": "1.0",
-  "name": "sfx_pixelmall_upgrade",
+  "$GMSound": "",
+  "%Name": "sfx_pixelmall_upgrade",
   "audioGroupId": {
     "name": "ag_sfx",
     "path": "audiogroups/ag_sfx",
@@ -11,11 +10,14 @@
   "compression": 0,
   "conversionMode": 0,
   "duration": 0.407234,
+  "name": "sfx_pixelmall_upgrade",
   "parent": {
     "name": "og",
     "path": "folders/Sounds/sfx/og.yy",
   },
   "preload": false,
+  "resourceType": "GMSound",
+  "resourceVersion": "2.0",
   "sampleRate": 44100,
   "soundFile": "sfx_pixelmall_upgrade.ogg",
   "type": 0,

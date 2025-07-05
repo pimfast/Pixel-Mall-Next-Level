@@ -1,7 +1,6 @@
 {
-  "resourceType": "GMSound",
-  "resourceVersion": "1.0",
-  "name": "sfx_pixelmall_moneyUp",
+  "$GMSound": "",
+  "%Name": "sfx_pixelmall_moneyUp",
   "audioGroupId": {
     "name": "ag_sfx",
     "path": "audiogroups/ag_sfx",
@@ -11,11 +10,14 @@
   "compression": 0,
   "conversionMode": 0,
   "duration": 1.306122,
+  "name": "sfx_pixelmall_moneyUp",
   "parent": {
     "name": "og",
     "path": "folders/Sounds/sfx/og.yy",
   },
   "preload": false,
+  "resourceType": "GMSound",
+  "resourceVersion": "2.0",
   "sampleRate": 44100,
   "soundFile": "sfx_pixelmall_moneyUp.ogg",
   "type": 0,

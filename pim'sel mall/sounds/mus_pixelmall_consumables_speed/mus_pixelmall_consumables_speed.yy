@@ -1,7 +1,6 @@
 {
-  "resourceType": "GMSound",
-  "resourceVersion": "1.0",
-  "name": "mus_pixelmall_consumables_speed",
+  "$GMSound": "",
+  "%Name": "mus_pixelmall_consumables_speed",
   "audioGroupId": {
     "name": "ag_mus",
     "path": "audiogroups/ag_mus",
@@ -11,11 +10,14 @@
   "compression": 0,
   "conversionMode": 0,
   "duration": 10.666667,
+  "name": "mus_pixelmall_consumables_speed",
   "parent": {
     "name": "music",
     "path": "folders/Sounds/music.yy",
   },
   "preload": false,
+  "resourceType": "GMSound",
+  "resourceVersion": "2.0",
   "sampleRate": 44100,
   "soundFile": "mus_pixelmall_consumables_speed.ogg",
   "type": 0,

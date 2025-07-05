@@ -1,7 +1,6 @@
 {
-  "resourceType": "GMSound",
-  "resourceVersion": "1.0",
-  "name": "mus_pixelmall_gameplay2",
+  "$GMSound": "",
+  "%Name": "mus_pixelmall_gameplay2",
   "audioGroupId": {
     "name": "ag_mus",
     "path": "audiogroups/ag_mus",
@@ -11,11 +10,14 @@
   "compression": 0,
   "conversionMode": 0,
   "duration": 36.963264,
+  "name": "mus_pixelmall_gameplay2",
   "parent": {
     "name": "music",
     "path": "folders/Sounds/music.yy",
   },
   "preload": false,
+  "resourceType": "GMSound",
+  "resourceVersion": "2.0",
   "sampleRate": 44100,
   "soundFile": "mus_pixelmall_gameplay2.mp3",
   "type": 0,

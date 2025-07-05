@@ -1,9 +1,9 @@
 {
-  "resourceType": "GMObject",
-  "resourceVersion": "1.0",
-  "name": "obj_reportarrow_satisfaction",
+  "$GMObject": "",
+  "%Name": "obj_reportarrow_satisfaction",
   "eventList": [],
   "managed": true,
+  "name": "obj_reportarrow_satisfaction",
   "overriddenProperties": [],
   "parent": {
     "name": "Report",
@@ -24,6 +24,8 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [],
+  "resourceType": "GMObject",
+  "resourceVersion": "2.0",
   "solid": false,
   "spriteId": {
     "name": "spr_report_up",

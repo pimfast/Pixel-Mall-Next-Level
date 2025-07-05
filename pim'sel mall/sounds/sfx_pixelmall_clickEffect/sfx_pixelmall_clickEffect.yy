@@ -1,7 +1,6 @@
 {
-  "resourceType": "GMSound",
-  "resourceVersion": "1.0",
-  "name": "sfx_pixelmall_clickEffect",
+  "$GMSound": "",
+  "%Name": "sfx_pixelmall_clickEffect",
   "audioGroupId": {
     "name": "ag_sfx",
     "path": "audiogroups/ag_sfx",
@@ -11,11 +10,14 @@
   "compression": 0,
   "conversionMode": 0,
   "duration": 2.039002,
+  "name": "sfx_pixelmall_clickEffect",
   "parent": {
     "name": "og",
     "path": "folders/Sounds/sfx/og.yy",
   },
   "preload": false,
+  "resourceType": "GMSound",
+  "resourceVersion": "2.0",
   "sampleRate": 44100,
   "soundFile": "sfx_pixelmall_clickEffect.ogg",
   "type": 0,

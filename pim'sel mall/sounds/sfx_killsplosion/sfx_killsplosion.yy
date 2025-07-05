@@ -1,7 +1,6 @@
 {
-  "resourceType": "GMSound",
-  "resourceVersion": "1.0",
-  "name": "sfx_killsplosion",
+  "$GMSound": "",
+  "%Name": "sfx_killsplosion",
   "audioGroupId": {
     "name": "ag_sfx",
     "path": "audiogroups/ag_sfx",
@@ -11,11 +10,14 @@
   "compression": 0,
   "conversionMode": 0,
   "duration": 1.056,
+  "name": "sfx_killsplosion",
   "parent": {
     "name": "sfx",
     "path": "folders/Sounds/sfx.yy",
   },
   "preload": false,
+  "resourceType": "GMSound",
+  "resourceVersion": "2.0",
   "sampleRate": 44100,
   "soundFile": "sfx_killsplosion.mp3",
   "type": 0,

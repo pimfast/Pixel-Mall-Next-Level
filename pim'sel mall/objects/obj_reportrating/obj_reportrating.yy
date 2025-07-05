@@ -1,9 +1,9 @@
 {
-  "resourceType": "GMObject",
-  "resourceVersion": "1.0",
-  "name": "obj_reportrating",
+  "$GMObject": "",
+  "%Name": "obj_reportrating",
   "eventList": [],
   "managed": true,
+  "name": "obj_reportrating",
   "overriddenProperties": [],
   "parent": {
     "name": "Report",
@@ -24,6 +24,8 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [],
+  "resourceType": "GMObject",
+  "resourceVersion": "2.0",
   "solid": false,
   "spriteId": {
     "name": "spr_reportrating_4",
