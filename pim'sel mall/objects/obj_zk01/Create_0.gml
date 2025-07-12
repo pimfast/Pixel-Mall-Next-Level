@@ -24,16 +24,16 @@ levelprice = [0,
 7000,
 9000];
 
-levelcharge = [0,10,20,35,45,55]
-levelrating = [0,10,20,35,45,55]
-leveltime = [0,4,3.5,3,2.5,2]
+levelcharge = [0,10,20,35,45,55];
+levelrating = [0,0.1,0.1,0.1,0.1,0.1];
+leveltime = [0,4,3.5,3,2.5,2];
 
 //set the level
-level = 1 //0 = not purchased. -1 = not available for purchase. -2 = nothin, not high enough
+level = 1; //0 = not purchased. -1 = not available for purchase. -2 = nothin, not high enough
 
-//lvl0sprite = spr_ndv01
-//lvlminus1sprite = spr_ndv03
+//lvl0sprite = spr_ndv01;
+//lvlminus1sprite = spr_ndv03;
 
-servicecharge = levelcharge[level]
-servicerating = levelrating[level]
-servicetime = leveltime[level]
+servicecharge = levelcharge[level];
+servicerating = levelrating[level];
+servicetime = leveltime[level];

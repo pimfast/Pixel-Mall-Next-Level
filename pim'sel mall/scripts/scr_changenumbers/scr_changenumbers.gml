@@ -50,6 +50,17 @@ function changepixelmoney(pixelmoneystatement) {
 	}
 }
 
+function shoplevelup(selectedshop) {
+	//maybe change this to be just a general upgradeable level up? idk
+	selectedshop.level++;
+	selectedshop.sprite_index = asset_get_index("spr_store_"+string(upgradewindow.selectedmallpart.shopname)+"_lvl"+string(upgradewindow.selectedmallpart.level));
+	selectedshop.image_alpha = 1;
+	
+	selectedshop.servicecharge = selectedshop.levelcharge[selectedshop.level];
+	selectedshop.servicerating = selectedshop.levelrating[selectedshop.level];
+	selectedshop.servicetime = selectedshop.leveltime[selectedshop.level];
+}
+
 function considerlevelup() {
 	if (global.level < 100) && (global.money >= global.levelmoneyreq[global.level+1]) && (global.rating >= global.levelratingreq[global.level+1]) {
 		global.level++
