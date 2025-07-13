@@ -8,8 +8,8 @@
   "name":"obj_lobby01",
   "overriddenProperties":[],
   "parent":{
-    "name":"Level 1-10",
-    "path":"folders/Objects/Mall Parts/Level 1-10.yy",
+    "name":"Mall Parts",
+    "path":"folders/Objects/Mall Parts.yy",
   },
   "parentObjectId":null,
   "persistent":false,

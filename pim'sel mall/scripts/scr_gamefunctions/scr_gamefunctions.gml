@@ -32,7 +32,7 @@ function startday() {
 			sprite_index = lvl0sprite;
 		}
 		if (level >= 1) {
-			if (object_get_name(object_index) != "obj_counter") {
+			if (object_get_name(object_index) != "obj_counter01") {
 				array_push(global.shoptions,string_letters(shopname));
 			}
 			////buying a shop doesn't update nothing, so i put this here to refresh the things every day,
@@ -66,7 +66,7 @@ function startnight() {
 	
 	//i still think
 	with (obj_shopparent) {
-		if (object_get_name(object_index) != "obj_counter") {
+		if (object_get_name(object_index) != "obj_counter01") {
 			if (level <= -2) {
 				image_alpha = 1;
 				sprite_index = noone;

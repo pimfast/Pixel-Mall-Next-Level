@@ -3,5 +3,5 @@
 go = "big"
 dir = "up"
 
-scalerate = 0.5
+scalerate = 0.25
 ypos = -40

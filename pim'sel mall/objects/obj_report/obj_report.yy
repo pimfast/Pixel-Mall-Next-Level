@@ -13,7 +13,10 @@
     "name":"Report",
     "path":"folders/Objects/UI/Report.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_buttonparent",
+    "path":"objects/obj_buttonparent/obj_buttonparent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

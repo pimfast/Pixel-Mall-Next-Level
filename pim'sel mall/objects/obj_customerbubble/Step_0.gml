@@ -1,7 +1,7 @@
 /// @desc
 
 if (string_count("urgent",string(sprite_index)) >= 1) {
-	scalerate = 1
+	scalerate = 0.5
 } else {
 	if (sprite_index == spr_customerbubble_purchasing) || (sprite_index == spr_customerbubble_waiting) || (sprite_index == spr_customerbubble_linefull) || (sprite_index == spr_customerbubble_linefull_urgent) {
 		scalerate = 0
@@ -14,7 +14,7 @@ if (string_count("urgent",string(sprite_index)) >= 1) {
 			if (ypos >= -38) {dir = "up"}
 		}
 	} else {
-		scalerate = 0.5
+		scalerate = 0.25
 	}
 }
 

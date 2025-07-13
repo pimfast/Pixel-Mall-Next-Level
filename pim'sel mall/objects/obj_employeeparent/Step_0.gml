@@ -7,7 +7,7 @@ if (alarm[0] = -1) {
 	sprite_index = asset_get_index("spr_employee_"+_employeename+"_idle")
 } else {
 	sprite_index = asset_get_index("spr_employee_"+_employeename+"_busy")
-	if (attending == obj_counter.id) {
+	if (attending == obj_counter01.id) {
 		image_xscale = -1
 	} else {
 		image_xscale = 1
@@ -17,8 +17,8 @@ if (alarm[0] = -1) {
 if (target != noone) {
 	
 	var _targetx = target.x
-	if (instance_exists(obj_counter)) {
-		if (target != obj_counter.id) {
+	if (instance_exists(obj_counter01)) {
+		if (target != obj_counter01.id) {
 			_targetx = target.x-15
 		} else {
 			_targetx = target.x+5

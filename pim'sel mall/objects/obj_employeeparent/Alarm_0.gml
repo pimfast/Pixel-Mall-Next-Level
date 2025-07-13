@@ -1,6 +1,6 @@
 /// @desc finished being served
 
-if (attending.serving.shopimat == obj_counter) {
+if (attending.serving.shopimat == obj_counter01) {
 	//get them out the mall
 	if (attending.serving.class != "vip") {
 		changemoney(attending.serving.billmoney);

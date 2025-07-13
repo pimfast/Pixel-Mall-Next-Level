@@ -1,4 +1,3 @@
 /// @desc
 
-upgradewindow = noone
-upgradeprice = 0
+upgradewindow = noone;

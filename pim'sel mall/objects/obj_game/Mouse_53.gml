@@ -1,10 +1,8 @@
 /// @desc stores/customers
 
-//check for buttons
+//check for buttons, check for other stuff if no extraneous buttons are being clicked
 var _button = instance_position(mouse_x,mouse_y,obj_buttonparent);
-if (_button != noone) {
-	//do nothing this is just to make sure that nothing else happens
-} else {
+if (_button == noone) {
 	//check for customers
 	var _customer = instance_position(mouse_x,mouse_y,obj_customer);
 	if (_customer != noone) && (_customer.state != "waitingfor_employee") {
@@ -32,14 +30,25 @@ if (_button != noone) {
 				if (_shop.level >= 1) {
 					if (_shop.attended == false) && (_shop.tobeattended == false) && (_shop.myemployee == noone) {
 						var _n = noone;
-						var _d, _t; //d for closest distance, t for check distance.
+						var _d, _t; //d for closest distance, t for check distance
+						var _samelevel = false; //set to true when a floor match is found
 						with (obj_employeeparent) {
 							if (attending == noone) {
 								_t = point_distance(x, y, _shop.x, _shop.y);
-						        if (_n == noone) || (_t < _d) { //If distance is less than current target distance, then apply new distance and instance id.
-						            _d = _t;
-						            _n = id;
-						        }
+								if (_samelevel == true) {
+									if (y == _shop.y) && (_t < _d) { //If distance is less than current target distance, then apply new distance and instance id
+										_d = _t;
+							            _n = id;
+							        }
+								} else {
+							        if (_n == noone) || (_t < _d) || (y == _shop.y)  {
+										if (y == _shop.y) {
+											_samelevel = true;
+										}
+										_d = _t;
+							            _n = id;
+							        }
+								}
 							}
 						}
 						_shop.myemployee = _n;

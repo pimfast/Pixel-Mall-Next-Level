@@ -96,7 +96,7 @@ switch (state) {
 	case "processing":
 		//do nothing. when employee is finished the state will be goingto_counter, goingto_exit, or waitingfor_employee
 		moveable = false
-		if (shopimat == obj_counter) {
+		if (shopimat == obj_counter01) {
 			if (shopimat.myemployee.alarm[0] == -1) {
 				//start talking
 				customerbubble.sprite_index = noone
@@ -127,7 +127,7 @@ switch (state) {
 				x += walksp
 			} else {
 				//i think i need to finish the line thing before this can be foolproof
-				shopimat = obj_counter
+				shopimat = obj_counter01
 				//if i am at the front of the checkout line set it to be serving me
 				if (self.id == array_first(global.checkoutline)) {
 					shopimat.serving = self.id
@@ -171,14 +171,16 @@ switch (state) {
 			if (shopimat != noone) /*(!array_contains(global.checkoutline,obj_customer.id))*/ {
 				//if the array does not have a customer, then,
 				//mark employee as not busy
-				shopimat.myemployee.attending = noone
+				shopimat.myemployee.attending = noone;
+					show_debug_message(asset_get_index("spr_"+class+"_"+customertype+"_walk_"+substate));
 			
 				//mark the checkout as not attended by employee
 				shopimat.attended = false
 				shopimat.myemployee = noone
 			}
-			shopimat = noone
+			//shopimat = noone
 		}
+		shopimat = noone //putting this here cuz i think it fixes a crash
 		
 		//remove self from checkoutline and customerline in case of early anger
 		outofline(self,global.customerline)
