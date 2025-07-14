@@ -34,7 +34,7 @@ buymorebutton.y = y+(100*image_yscale);
 buymorebutton.image_xscale = image_xscale*0.9;
 buymorebutton.image_yscale = image_yscale*0.9;
 
-closebutton.x = x+(100*image_xscale);
-closebutton.y = y-(200*image_yscale);
+closebutton.x = x+(115*image_xscale);
+closebutton.y = y-(199*image_yscale);
 closebutton.image_xscale = image_xscale;
 closebutton.image_yscale = image_yscale;

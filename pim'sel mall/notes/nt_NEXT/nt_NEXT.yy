@@ -1,11 +1,11 @@
 {
-  "$GMNotes": "",
-  "%Name": "nt_NEXT",
-  "name": "nt_NEXT",
-  "parent": {
-    "name": "pim'sel mall",
-    "path": "pim'sel mall.yyp",
+  "$GMNotes":"",
+  "%Name":"nt_NEXT",
+  "name":"nt_NEXT",
+  "parent":{
+    "name":"Notes",
+    "path":"folders/Notes.yy",
   },
-  "resourceType": "GMNotes",
-  "resourceVersion": "2.0",
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
 }

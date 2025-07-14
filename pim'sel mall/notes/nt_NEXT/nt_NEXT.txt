@@ -1,4 +1,4 @@
-MAKE IT SO TAPPING *ANY* OBJECT DURING UPGRADE TIME WILL TRY TO UPGRADE IT
+MAKE IT SO TAPPING *ANY* OBJECT DURING UPGRADE TIME WILL TRY TO UPGRADE IT (bad idea)
 except for objects on the UI_Instances layer. also turn the lobby object into an asset
 actually just do this by having the shop parent be itself parented by an "upgradeable" parent and
 have it so that while it's upgrade time it checks for interactions with the upgradeable thing

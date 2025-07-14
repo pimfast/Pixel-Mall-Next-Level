@@ -15,3 +15,4 @@ closebutton = instance_create_depth(room_width/2,room_height/2,-200,obj_buttoncl
 closebutton.upgradewindow = self;
 
 selectedmallpart = noone;
+mallpartlevel = 0;

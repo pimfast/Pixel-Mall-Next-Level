@@ -10,7 +10,7 @@ draw_set_color(c_dkgray)
 if (room == rm_title) {
 	draw_text_transformed(x,y,"Get more\nshit",image_xscale,image_yscale,0);
 } else {
-	if (!upgradewindow.selectedmallpart.levelcurrency[upgradewindow.selectedmallpart.level+1]) {
+	if (!upgradewindow.selectedmallpart.levelcurrency[upgradewindow.mallpartlevel+1]) {
 		draw_text_transformed(x,y,"Get\nMoney",image_xscale,image_yscale,0);
 	} else {
 		draw_text_transformed(x,y,"Get\nShop Points",image_xscale,image_yscale,0);

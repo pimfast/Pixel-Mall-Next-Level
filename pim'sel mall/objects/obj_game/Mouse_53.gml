@@ -22,8 +22,9 @@ if (_button == noone) {
 			//run shop script
 			if (global.mode == "upgrade") {
 				if (!instance_exists(obj_upgradewindow)) && (_shop.level >= 0) && (_shop.level < 5) {
-					var _shopmenu = instance_create_layer(room_width/2,(room_height/2)+22,"UI_Instances",obj_upgradewindow)
-					_shopmenu.selectedmallpart = _shop
+					var _shopmenu = instance_create_layer(room_width/2,(room_height/2)+22,"UI_Instances",obj_upgradewindow);
+					_shopmenu.selectedmallpart = _shop;
+					_shopmenu.mallpartlevel = _shop.level;
 				}
 			} else {
 				//get the closest employee, if they're available, order them here, if not, get the next one

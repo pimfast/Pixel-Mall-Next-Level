@@ -19,7 +19,7 @@ switch (room) {
 			if (time_minutes >= _hourlength) {time_minutes = 0; time_hours++}
 			
 			if (alarm_get(0) == -1) {
-				alarm_set(0,irandom_range(500,1000))
+				alarm_set(0,irandom_range(300,1500))
 			}
 			
 			//time stop

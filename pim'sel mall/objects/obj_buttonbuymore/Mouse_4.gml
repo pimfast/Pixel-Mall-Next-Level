@@ -13,4 +13,10 @@ if (room == rm_title) {
 			audio_play_sound(sfx_pixelmall_dragSuccess,1,0);
 			break;
 	}
+} else {
+	if (!upgradewindow.selectedmallpart.levelcurrency[upgradewindow.mallpartlevel+1]) {
+		changemoney(1);
+	} else {
+		changepixelmoney(1);
+	}
 }
