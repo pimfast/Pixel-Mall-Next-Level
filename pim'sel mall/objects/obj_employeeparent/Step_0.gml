@@ -1,12 +1,16 @@
 /// @desc move employee
 
-var _elvposition = 32
-var _employeename = string_delete(object_get_name(object_index),1,13)
+if (level <= 0) {
+	exit;
+}
+
+var _elvposition = 32;
+var _effWalksp = walksp / 60;
 
 if (alarm[0] = -1) {
-	sprite_index = asset_get_index("spr_employee_"+_employeename+"_idle")
+	sprite_index = asset_get_index("spr_employee_"+employeename+"_idle")
 } else {
-	sprite_index = asset_get_index("spr_employee_"+_employeename+"_busy")
+	sprite_index = asset_get_index("spr_employee_"+employeename+"_busy")
 	if (attending == obj_counter01.id) {
 		image_xscale = -1
 	} else {
@@ -33,19 +37,19 @@ if (target != noone) {
 	//walk to the place, and do stuff when getting there.
 	if (_targety == y) {
 		if (x < _targetx) {
-			sprite_index = asset_get_index("spr_employee_"+_employeename+"_walk")
-			if (x + walksp > _targetx) {
+			sprite_index = asset_get_index("spr_employee_"+employeename+"_walk")
+			if (x + _effWalksp > _targetx) {
 				x = _targetx
 			} else {
-				x += walksp
+				x += _effWalksp
 			}
 		}
 		if (x > _targetx) {
-			sprite_index = asset_get_index("spr_employee_"+_employeename+"_walk")
-			if (x - walksp < _targetx) {
+			sprite_index = asset_get_index("spr_employee_"+employeename+"_walk")
+			if (x - _effWalksp < _targetx) {
 				x = _targetx
 			} else {
-				x -= walksp
+				x -= _effWalksp
 			}
 		}
 		//when reaching the destination, do some shit
@@ -64,19 +68,19 @@ if (target != noone) {
 	} else {
 		//walk to the elevator
 		if (x > _elvposition) {
-			sprite_index = asset_get_index("spr_employee_"+_employeename+"_walk")
-			if (x - walksp < _elvposition) {
+			sprite_index = asset_get_index("spr_employee_"+employeename+"_walk")
+			if (x - _effWalksp < _elvposition) {
 				x = _elvposition
 			} else {
-				x -= walksp
+				x -= _effWalksp
 			}
 		}
 		if (x < _elvposition) {
-			sprite_index = asset_get_index("spr_employee_"+_employeename+"_walk")
-			if (x + walksp > _elvposition) {
+			sprite_index = asset_get_index("spr_employee_"+employeename+"_walk")
+			if (x + _effWalksp > _elvposition) {
 				x = _elvposition
 			} else {
-				x += walksp
+				x += _effWalksp
 			}
 		}
 		
@@ -84,7 +88,7 @@ if (target != noone) {
 		if (x == _elvposition) {
 			//if it's lower, go down the elevator
 			if (_targety > y) {
-				sprite_index = asset_get_index("spr_employee_"+_employeename+"_elevator")
+				sprite_index = asset_get_index("spr_employee_"+employeename+"_elevator")
 				if (y - elvsp > _targety) {
 					y = _targety
 				} else {
@@ -93,7 +97,7 @@ if (target != noone) {
 			}
 			//if it's higher, go up the elevator
 			if (_targety < y) {
-				sprite_index = asset_get_index("spr_employee_"+_employeename+"_elevator")
+				sprite_index = asset_get_index("spr_employee_"+employeename+"_elevator")
 				if (y - elvsp < _targety) {
 					y = _targety
 				} else {

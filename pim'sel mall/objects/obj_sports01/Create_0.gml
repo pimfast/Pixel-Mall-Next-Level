@@ -2,7 +2,7 @@
 
 event_inherited();
 
-storename = "Sports Store";
+name = "Sports Store";
 leveldesc = [0,
 "Service Charge $10",
 "Service Charge $10 → $20\nShorter serving time",
@@ -32,6 +32,8 @@ level = 1; //0 = not purchased. -1 = not available for purchase. -2 = nothin, no
 //lvl0sprite = spr_ndv01;
 //lvlminus1sprite = spr_ndv03;
 
+//if (level >= 0) {
 servicecharge = levelcharge[level];
 servicerating = levelrating[level];
 servicetime = leveltime[level];
+//}

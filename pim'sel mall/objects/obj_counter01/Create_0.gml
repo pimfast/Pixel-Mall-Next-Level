@@ -2,7 +2,7 @@
 
 event_inherited();
 
-storename = "Counter";
+name = "Counter";
 levelpic = [0,
 0,
 spr_pic_counter01_lvl2,

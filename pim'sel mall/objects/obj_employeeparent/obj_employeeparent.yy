@@ -13,7 +13,10 @@
     "name":"Employees",
     "path":"folders/Objects/Employees.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_upgradeableparent",
+    "path":"objects/obj_upgradeableparent/obj_upgradeableparent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

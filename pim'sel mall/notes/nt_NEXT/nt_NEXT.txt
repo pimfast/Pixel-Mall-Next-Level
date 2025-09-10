@@ -1,10 +1,14 @@
-MAKE IT SO TAPPING *ANY* OBJECT DURING UPGRADE TIME WILL TRY TO UPGRADE IT (bad idea)
-except for objects on the UI_Instances layer. also turn the lobby object into an asset
-actually just do this by having the shop parent be itself parented by an "upgradeable" parent and
-have it so that while it's upgrade time it checks for interactions with the upgradeable thing
+SET UP GOLDHOG
+probably have to override some more of the employeeparent code
 
 SET UP THE MUSIC PLAYER
 find out exactly how long it's supposed to keep customers happy
 
-MAKE THE SECOND STAGE
+SET UP ELEVATOR
+probably have to override some more of the employeeparent code
+
+CHANGE "NAME" VARIABLE TO SOMETHING LESS GENERIC
+rn i'm noticing the color of the variable text change to red in some places so try to avoid conflicts
+
+MAKE THE SECOND STAGE + CAMERA CONTROLS
 it's gonna have bunny rabbits

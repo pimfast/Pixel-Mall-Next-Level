@@ -50,15 +50,22 @@ function changepixelmoney(pixelmoneystatement) {
 	}
 }
 
-function shoplevelup(selectedshop) {
-	//maybe change this to be just a general upgradeable level up? idk
-	selectedshop.level++;
-	selectedshop.sprite_index = asset_get_index("spr_store_"+string(upgradewindow.selectedmallpart.shopname)+"_lvl"+string(upgradewindow.selectedmallpart.level));
-	selectedshop.image_alpha = 1;
+function mallpartlevelup(tbluMallpart) {
+	//tblu = to be leveled up
+	tbluMallpart.level++;
+	if (object_get_parent(tbluMallpart.object_index) == obj_employeeparent) {
+		tbluMallpart.image_alpha = 1;
+		
+		tbluMallpart.servicesp = tbluMallpart.levelservicesp[tbluMallpart.level];
+		tbluMallpart.walksp = tbluMallpart.levelwalksp[tbluMallpart.level];
+	} else {
+		tbluMallpart.sprite_index = asset_get_index("spr_store_"+string(upgradewindow.selectedmallpart.shopname)+"_lvl"+string(upgradewindow.selectedmallpart.level));
+		tbluMallpart.image_alpha = 1;
 	
-	selectedshop.servicecharge = selectedshop.levelcharge[selectedshop.level];
-	selectedshop.servicerating = selectedshop.levelrating[selectedshop.level];
-	selectedshop.servicetime = selectedshop.leveltime[selectedshop.level];
+		tbluMallpart.servicecharge = tbluMallpart.levelcharge[tbluMallpart.level];
+		tbluMallpart.servicerating = tbluMallpart.levelrating[tbluMallpart.level];
+		tbluMallpart.servicetime = tbluMallpart.leveltime[tbluMallpart.level];
+	}
 }
 
 function considerlevelup() {

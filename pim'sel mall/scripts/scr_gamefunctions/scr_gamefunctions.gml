@@ -47,10 +47,12 @@ function startday() {
 	}
 	with (obj_employeeparent) {
 		if (level < 0) {
-			
+			image_alpha = 1;
+			sprite_index = noone;
 		}
 		if (level == 0) {
-			
+			image_alpha = 1;
+			sprite_index = noone;
 		}
 	}
 	instance_destroy(obj_button_startday);
@@ -93,6 +95,15 @@ function startnight() {
 		x = myxspot;
 		y = myyspot;
 		target = noone;
+		
+		if (level < 0) {
+			image_alpha = 1;
+			sprite_index = noone;
+		}
+		if (level == 0) {
+			image_alpha = 0.5;
+			sprite_index = asset_get_index("spr_employee_"+string(employeename)+"_idle");
+		}
 	}
 	instance_create_layer(room_width/2,room_height-64,"Instances",obj_button_startday);
 	obj_game.background_day_alpha = 0;

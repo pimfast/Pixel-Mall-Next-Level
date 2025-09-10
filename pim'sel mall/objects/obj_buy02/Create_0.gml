@@ -2,7 +2,7 @@
 
 event_inherited();
 
-storename = "Electronics Shop";
+name = "Electronics Shop";
 leveldesc = [0,
 "Service Charge $10",
 "Service Charge $10 → $20\nShorter serving time",
@@ -33,7 +33,7 @@ lvl0sprite = spr_ndv01;
 lvlminus1sprite = spr_ndv03;
 
 if (level >= 0) {
-servicecharge = levelcharge[level];
-servicerating = levelrating[level];
-servicetime = leveltime[level];
+	servicecharge = levelcharge[level];
+	servicerating = levelrating[level];
+	servicetime = leveltime[level];
 }

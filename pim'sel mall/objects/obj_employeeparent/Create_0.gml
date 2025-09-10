@@ -1,13 +1,9 @@
 /// @desc
 
-level = 0
+employeename = string_delete(object_get_name(object_index),1,13); //remove "obj_employee". leaves only name
 
-name = ""
-walksp = 2
-servicesp = 1
-
-elvsp = 2/**obj_elevator.spd*/
-target = noone
-attending = noone
-myxspot = x
-myyspot = y
+elvsp = 2/*obj_elevator.spd*/;
+target = noone;
+attending = noone;
+myxspot = x;
+myyspot = y;

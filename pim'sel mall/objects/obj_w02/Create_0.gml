@@ -2,7 +2,7 @@
 
 event_inherited();
 
-storename = "Burger Place";
+name = "Burger Place";
 leveldesc = [0,
 "Service Charge $10",
 "Service Charge $10 → $20\nShorter serving time",

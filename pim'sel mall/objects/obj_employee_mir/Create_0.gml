@@ -1,13 +1,40 @@
-/// @desc
+/// @desc set level and stuff
 
-level = 0
+event_inherited();
 
-name = "Mir"
-walksp = 2
-servicesp = 1
+name = "Mir";
+leveldesc = ["Hire Mir to help you!",
+"Hire Mir to help you!",
+"Upgrade Mir to Lv2 for faster walking\nand serving speed",
+"Upgrade Mir to Lv3 for faster walking\nand serving speed",
+"Upgrade Mir to Lv4 for faster walking\nand serving speed",
+"Upgrade Mir to Lv5 for faster walking\nand serving speed",
+"Upgrade Mir to Lv6 for faster walking\nand serving speed",
+"Upgrade Mir to Lv7 for faster walking\nand serving speed"];
+levelprice = [150,
+200,
+20,
+40,
+60,
+80,
+100,
+120];
+levelcurrency = [1,
+1,
+1,
+1,
+1,
+1,
+1,
+1];
 
-elvsp = 2/**obj_elevator.spd*/
-target = noone
-attending = noone
-myxspot = x
-myyspot = y
+levelservicesp = [1,1,0.9,0.8,0.7,0.6,0.5,0.45];
+levelwalksp = [1,120,140,150,160,170,175,180];
+
+//set the level
+level = 0; //0 = not purchased. -1 = not available for purchase. -2 = nothin, not high enough
+
+if (level >= 0) {
+	walksp = (levelwalksp[level]);
+	servicesp = levelservicesp[level];
+}

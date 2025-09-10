@@ -1,18 +1,21 @@
 /// @desc
 
+var currencytype = upgradewindow.selectedmallpart.levelcurrency[upgradewindow.mallpartlevel+1];
+var selectioncost = upgradewindow.selectedmallpart.levelprice[upgradewindow.mallpartlevel+1];
+
 //purchase
-if (!upgradewindow.selectedmallpart.levelcurrency[upgradewindow.mallpartlevel+1]) {
-	if (global.money >= upgradewindow.selectedmallpart.levelprice[upgradewindow.mallpartlevel+1]) {
+if (!currencytype) {
+	if (global.money >= selectioncost) {
 		audio_play_sound(sfx_pixelmall_moneyUp,1,0);
-		global.money -= upgradewindow.selectedmallpart.levelprice[upgradewindow.mallpartlevel+1];
-		shoplevelup(upgradewindow.selectedmallpart);
+		changemoney(selectioncost * -1);
+		mallpartlevelup(upgradewindow.selectedmallpart);
 		upgradewindow.dir = "close";
 	}
 } else {
-	if (global.pixelmoney >= upgradewindow.selectedmallpart.levelprice[upgradewindow.mallpartlevel+1]) {
+	if (global.pixelmoney >= selectioncost) {
 		audio_play_sound(sfx_pixelmall_moneyUp,1,0);
-		global.pixelmoney -= upgradewindow.selectedmallpart.levelprice[upgradewindow.mallpartlevel+1];
-		shoplevelup(upgradewindow.selectedmallpart);
+		changepixelmoney(selectioncost * -1);
+		mallpartlevelup(upgradewindow.selectedmallpart);
 		upgradewindow.dir = "close";
 	}
 }

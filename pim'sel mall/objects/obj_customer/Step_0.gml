@@ -1,7 +1,7 @@
 /// @desc
 
 if (beingmoved == true) {
-	var customerstore = instance_position(mouse_x,mouse_y,obj_shopparent)
+	var customerstore = instance_position(mouse_x,mouse_y,obj_shopparent);
 	if (customerstore != noone) {
 		if (desiredstore == customerstore.shoptype) && (customerstore.level >= 1) && (customerstore.serving == noone) {
 			x = customerstore.x+15
@@ -101,14 +101,14 @@ switch (state) {
 				//start talking
 				customerbubble.sprite_index = noone;
 				audio_play_sound(sfx_pixelmall_cashier,1,0);
-				shopimat.myemployee.alarm[0] = 60/shopimat.myemployee.servicesp;
+				shopimat.myemployee.alarm[0] = 60*shopimat.myemployee.servicesp;
 			}
 		} else {
 			if (shopimat.myemployee.alarm[0] == -1) {
 				//start talking
 				customerbubble.sprite_index = spr_customerbubble_purchasing;
 				audio_play_sound(sfx_pixelmall_inStore,1,0);
-				shopimat.myemployee.alarm[0] = 180/shopimat.myemployee.servicesp;
+				shopimat.myemployee.alarm[0] = 180*shopimat.myemployee.servicesp;
 			}
 		}
 		break;

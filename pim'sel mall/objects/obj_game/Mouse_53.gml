@@ -3,30 +3,33 @@
 //check for buttons, check for other stuff if no extraneous buttons are being clicked
 var _button = instance_position(mouse_x,mouse_y,obj_buttonparent);
 if (_button == noone) {
-	//check for customers
-	var _customer = instance_position(mouse_x,mouse_y,obj_customer);
-	if (_customer != noone) && (_customer.state != "waitingfor_employee") {
-		//run customer script
-		if (_customer.moveable == true) {
-			audio_play_sound(sfx_pixelmall_dragStart,1,0);
-			global.heldcustomer = _customer.id;
-			_customer.beingmoved = true;
-			_customer.image_blend = make_color_hsv(255,0,50);
-			_customer.image_xscale *= 1.25;
-			_customer.image_yscale *= 1.25;
+	if (global.mode == "upgrade") {
+		var _upgradeselection = instance_position(mouse_x,mouse_y,obj_upgradeableparent);
+		if (_upgradeselection != noone) {
+			//upgrade something
+			if (!instance_exists(obj_upgradewindow)) && (_upgradeselection.level >= 0) && (_upgradeselection.level < (array_length(_upgradeselection.leveldesc) - 1)) {
+				var _shopmenu = instance_create_layer(room_width/2,(room_height/2)+22,"UI_Instances",obj_upgradewindow);
+				_shopmenu.selectedmallpart = _upgradeselection;
+				_shopmenu.mallpartlevel = _upgradeselection.level;
+			}
 		}
 	} else {
-		//check for stores
-		var _shop = instance_position(mouse_x,mouse_y,obj_shopparent);
-		if (_shop != noone) {
-			//run shop script
-			if (global.mode == "upgrade") {
-				if (!instance_exists(obj_upgradewindow)) && (_shop.level >= 0) && (_shop.level < 5) {
-					var _shopmenu = instance_create_layer(room_width/2,(room_height/2)+22,"UI_Instances",obj_upgradewindow);
-					_shopmenu.selectedmallpart = _shop;
-					_shopmenu.mallpartlevel = _shop.level;
-				}
-			} else {
+		//check for customers
+		var _customer = instance_position(mouse_x,mouse_y,obj_customer);
+		if (_customer != noone) && (_customer.state != "waitingfor_employee") {
+			//run customer script
+			if (_customer.moveable == true) {
+				audio_play_sound(sfx_pixelmall_dragStart,1,0);
+				global.heldcustomer = _customer.id;
+				_customer.beingmoved = true;
+				_customer.image_blend = make_color_hsv(255,0,50);
+				_customer.image_xscale *= 1.25;
+				_customer.image_yscale *= 1.25;
+			}
+		} else {
+			//check for stores
+			var _shop = instance_position(mouse_x,mouse_y,obj_shopparent);
+			if (_shop != noone) {
 				//get the closest employee, if they're available, order them here, if not, get the next one
 				if (_shop.level >= 1) {
 					if (_shop.attended == false) && (_shop.tobeattended == false) && (_shop.myemployee == noone) {
@@ -34,21 +37,21 @@ if (_button == noone) {
 						var _d, _t; //d for closest distance, t for check distance
 						var _samelevel = false; //set to true when a floor match is found
 						with (obj_employeeparent) {
-							if (attending == noone) {
+							if (level >= 1) && (attending == noone) {
 								_t = point_distance(x, y, _shop.x, _shop.y);
 								if (_samelevel == true) {
 									if (y == _shop.y) && (_t < _d) { //If distance is less than current target distance, then apply new distance and instance id
 										_d = _t;
-							            _n = id;
-							        }
+								        _n = id;
+								    }
 								} else {
-							        if (_n == noone) || (_t < _d) || (y == _shop.y)  {
+								    if (_n == noone) || (_t < _d) || (y == _shop.y)  {
 										if (y == _shop.y) {
 											_samelevel = true;
 										}
 										_d = _t;
-							            _n = id;
-							        }
+								        _n = id;
+								    }
 								}
 							}
 						}

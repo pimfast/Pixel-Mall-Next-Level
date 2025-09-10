@@ -1,19 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_shopparent",
+  "%Name":"obj_employee_goldhog",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_shopparent",
+  "name":"obj_employee_goldhog",
   "overriddenProperties":[],
   "parent":{
-    "name":"Mall Parts",
-    "path":"folders/Objects/Mall Parts.yy",
+    "name":"Level 1-10",
+    "path":"folders/Objects/Employees/Level 1-10.yy",
   },
   "parentObjectId":{
-    "name":"obj_upgradeableparent",
-    "path":"objects/obj_upgradeableparent/obj_upgradeableparent.yy",
+    "name":"obj_employeeparent",
+    "path":"objects/obj_employeeparent/obj_employeeparent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
