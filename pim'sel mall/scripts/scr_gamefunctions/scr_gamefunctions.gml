@@ -55,10 +55,18 @@ function startday() {
 			sprite_index = noone;
 		}
 	}
+	
+	obj_counter01.mask_index = spr_store_counter01_lvl1;
+	
+	instance_destroy(obj_purchaseupgradelabel);
+	instance_destroy(obj_levellabel);
 	instance_destroy(obj_button_startday);
 	obj_game.background_day_alpha = 1;
 	obj_button_pause.sprite_index = spr_button_pause;
 	global.mode = "game";
+	
+	//start with a customer
+	obj_game.alarm[0] = 1;
 }
 
 function startnight() {
@@ -81,10 +89,6 @@ function startnight() {
 				image_alpha = 0.5;
 				sprite_index = asset_get_index("spr_store_"+string(shopname)+"_lvl1");
 			}
-			if (level >= 1) {
-				image_alpha = 1;
-				sprite_index = asset_get_index("spr_store_"+string(shopname)+"_lvl"+string(level));
-			}
 		}
 		tobeattended = false;
 		attended = false;
@@ -105,6 +109,32 @@ function startnight() {
 			sprite_index = asset_get_index("spr_employee_"+string(employeename)+"_idle");
 		}
 	}
+	with (obj_upgradeableparent) {
+		if (level >= 0) {
+			mypurchaseupgradelabel = instance_create_depth(x+labelX,y+labelY,0,obj_purchaseupgradelabel);
+			mylevellabel = instance_create_depth(x+labelX,y+labelY+20,0,obj_levellabel);
+			mylevellabel.dir = "";
+			if (level == 0) {
+				mypurchaseupgradelabel.sprite_index = spr_hko_ip_icon_purchase;
+				mylevellabel.sprite_index = noone;
+			}
+			if (level >= 1) {
+				if (level < (array_length(leveldesc) - 1)) {
+					mypurchaseupgradelabel.sprite_index = spr_hko_ip_icon_upgrade;
+				} else {
+					mypurchaseupgradelabel.sprite_index = noone;
+				}
+				mylevellabel.sprite_index = asset_get_index("spr_label_lvl"+string(level));
+				if (object_get_parent(object_index) == obj_employeeparent) {
+					mypurchaseupgradelabel.starty = y+labelY-22;
+					mylevellabel.y = y+labelY-2;
+				}
+			}
+		}
+	}
+	
+	obj_counter01.mask_index = spr_store_counter_upgrademask;
+	
 	instance_create_layer(room_width/2,room_height-64,"Instances",obj_button_startday);
 	obj_game.background_day_alpha = 0;
 	obj_button_pause.sprite_index = spr_button_back;

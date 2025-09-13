@@ -77,16 +77,16 @@ if (_button == noone) {
 						//		//and keep counting until it finds one that's not busy
 						//		instance_deactivate_object(instance_nearest(_shop.x,_shop.y,obj_employeeparent))
 						//	}
-						//	//instance_activate_all() //holy shit wait this is supposed to be outside isn't it
+						//	//instance_activate_all() //holy crap wait this is supposed to be outside isn't it
 						//}
 						//instance_activate_all()
 					}
 
 					if (_shop.serving != noone) {
 						if (_shop.myemployee != noone) {
-							audio_play_sound(sfx_pixelmall_bubble,1,0)
+							audio_play_sound(sfx_pixelmall_bubble,1,0);
 						} else {
-							audio_play_sound(sfx_pixelmall_dragStart,1,0)
+							audio_play_sound(sfx_pixelmall_dragStart,1,0);
 						}
 					}
 				}

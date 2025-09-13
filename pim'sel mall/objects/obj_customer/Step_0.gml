@@ -176,10 +176,11 @@ switch (state) {
 					shopimat.myemployee.attending = noone;
 				}
 					show_debug_message(asset_get_index("spr_"+class+"_"+customertype+"_walk_"+substate));
-			
-				//mark the checkout as not attended by employee
-				shopimat.attended = false
-				shopimat.myemployee = noone
+				if (shopimat.myemployee.employeename != "goldhog") {
+					//mark the checkout as not attended by employee
+					shopimat.attended = false
+					shopimat.myemployee = noone
+				}
 			}
 			//shopimat has to be set to noone in here otherwise cashier gets stuck
 			shopimat = noone;

@@ -53,8 +53,20 @@ function changepixelmoney(pixelmoneystatement) {
 function mallpartlevelup(tbluMallpart) {
 	//tblu = to be leveled up
 	tbluMallpart.level++;
+	if (tbluMallpart.level == (array_length(tbluMallpart.leveldesc) - 1)) {
+		tbluMallpart.mypurchaseupgradelabel.sprite_index = noone;
+	} else {
+		tbluMallpart.mypurchaseupgradelabel.sprite_index = spr_hko_ip_icon_upgrade;
+	}
+	
+	tbluMallpart.mylevellabel.sprite_index = asset_get_index("spr_label_lvl"+string(tbluMallpart.level));
+	
 	if (object_get_parent(tbluMallpart.object_index) == obj_employeeparent) {
 		tbluMallpart.image_alpha = 1;
+		if (tbluMallpart.level == 1) {
+			tbluMallpart.mypurchaseupgradelabel.starty -= 22;
+			tbluMallpart.mylevellabel.y -= 22
+		}
 		
 		tbluMallpart.servicesp = tbluMallpart.levelservicesp[tbluMallpart.level];
 		tbluMallpart.walksp = tbluMallpart.levelwalksp[tbluMallpart.level];

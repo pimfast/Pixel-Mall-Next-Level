@@ -7,3 +7,6 @@ target = noone;
 attending = noone;
 myxspot = x;
 myyspot = y;
+
+labelX = 0;
+labelY = -30;

@@ -2,13 +2,13 @@
 
 randomise();
 
-global.level = 1 //max is 10 (for now muahahaha)
-global.rating = 0
-global.money = 400
-global.pixelmoney = 20
-global.day = 1
+global.level = 1;
+global.rating = 0;
+global.money = 400;
+global.pixelmoney = 20;
+global.day = 1;
 
-global.mode = "game"
+global.mode = "game";
 
 var file;
 
@@ -100,7 +100,7 @@ if (!file_exists("cheatplz.dont")) {
 
 //set requirements and specifics
 global.levelmoneyreq = [
-0, //lvl 0 wtf
+0, //lvl 0 n/a
 0, //lvl 1 default
 500, //lvl 2 requirement: 500
 3000, //lvl 3 requirement: 3000
@@ -201,10 +201,10 @@ global.levelmoneyreq = [
 945000, //lvl 98 requirement:
 960000, //lvl 99 requirement:
 980000, //lvl 100 requirement:
-]
+];
 
 global.levelratingreq = [
-0, //lvl 0 wtf
+0, //lvl 0 n/a
 0, //lvl 1 default
 2, //lvl 2 requirement: 2.00
 10, //lvl 3 requirement: 10.00
@@ -305,4 +305,4 @@ global.levelratingreq = [
 27500, //lvl 98 requirement:
 28000, //lvl 99 requirement:
 28500, //lvl 100 requirement:
-]
+];

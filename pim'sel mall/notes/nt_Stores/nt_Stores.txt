@@ -4,7 +4,7 @@ a map in the lobby so that customers now walk to the store themselves.
 this is better than the auto-employee thing because it gives the player more agency to decide which store
 is the one they want to have auto-complete. you know what i mean.
 and the previous "the only thing you have left is tapping !'s" complaint is not really an issue 'cause
-it's waaayy unlikely you have all the stores at level 5 so you still got a lotta shit to do.
+it's waaayy unlikely you have all the stores at level 5 so you still got a lotta stuff to do.
 what happens when one store is on the map but other stores of the same type aren't? well
 the customer simply waits for that store to be empty and if it is, they go to it.
 

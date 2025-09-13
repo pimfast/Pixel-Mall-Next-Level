@@ -2,6 +2,9 @@
 
 event_inherited();
 
+labelX = -20;
+labelY = -20;
+
 name = "Counter";
 levelpic = [0,
 0,

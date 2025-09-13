@@ -8,6 +8,9 @@ attended = false; //no employees here
 tobeattended = false; //no employees going here while a customer is here
 myemployee = noone; //no employees going here
 
+labelX = 20;
+labelY = -60;
+
 ////bs to make the game stop whining
 //servicecharge = 0;
 //levelcharge = [0];

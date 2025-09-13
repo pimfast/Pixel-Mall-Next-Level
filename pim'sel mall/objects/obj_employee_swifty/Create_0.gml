@@ -28,7 +28,7 @@ levelcurrency = [1,
 1,
 1];
 
-levelservicesp = [2,2,1.5,0.8,0.4,0.2,0.15,0.1];	//damn man
+levelservicesp = [2,2,1.5,0.8,0.4,0.2,0.15,0.1];	//dang man
 levelwalksp = [40,40,140,190,440,640,740,840];	//swifty goes crazy
 
 //set the level

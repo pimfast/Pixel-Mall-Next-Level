@@ -1,7 +1,7 @@
 /// @desc
 
-go = "big"
-dir = "up"
+go = "big";
+dir = "up";
 
-scalerate = 0.25
-ypos = -40
+scalerate = 0.25;
+ypos = -40;
