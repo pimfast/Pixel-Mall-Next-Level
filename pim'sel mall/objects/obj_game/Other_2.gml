@@ -99,8 +99,7 @@ if (!file_exists("cheatplz.dont")) {
 //}
 
 //set requirements and specifics
-global.levelmoneyreq = [
-0, //lvl 0 n/a
+global.levelmoneyreq = [0, //lvl 0 n/a
 0, //lvl 1 default
 500, //lvl 2 requirement: 500
 3000, //lvl 3 requirement: 3000
@@ -203,8 +202,7 @@ global.levelmoneyreq = [
 980000, //lvl 100 requirement:
 ];
 
-global.levelratingreq = [
-0, //lvl 0 n/a
+global.levelratingreq = [0, //lvl 0 n/a
 0, //lvl 1 default
 2, //lvl 2 requirement: 2.00
 10, //lvl 3 requirement: 10.00
@@ -305,4 +303,17 @@ global.levelratingreq = [
 27500, //lvl 98 requirement:
 28000, //lvl 99 requirement:
 28500, //lvl 100 requirement:
+];
+
+global.levelcustomerrate = [0,
+840,
+510,
+480,
+450,
+390,
+360,
+330,
+270,
+240,
+210
 ];

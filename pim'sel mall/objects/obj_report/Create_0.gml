@@ -1,3 +1,3 @@
 /// @desc
 
-dir = "left"
+dir = "left";

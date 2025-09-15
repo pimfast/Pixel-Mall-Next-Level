@@ -143,8 +143,7 @@ switch (state) {
 						if (global.checkoutline[spotinline-1] == noone) {
 							global.checkoutline[spotinline-1] = self.id;
 							global.checkoutline[spotinline] = noone;
-							//wait does this code work well? i don't think it should
-							//but i haven't noticed anything wrong
+							//this kinda works. though customers often cut in line at the checkout
 						}
 					}
 				}

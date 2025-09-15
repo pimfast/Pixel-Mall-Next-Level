@@ -3,18 +3,18 @@
 function lineonlycontains(value,line) {
 	for (var i = 0; i < array_length(line); i++) {
 		if (line[i] != value) {
-			return(false)
+			return(false);
 		}
 	}
-	return(true)
+	return(true);
 }
 
 function addtofirstopenslot(customer,line) {
 	for (var i = 0; i < array_length(line); i++) {
 		if (line[i] == noone) {
-			line[i] = customer.id
+			line[i] = customer.id;
 			show_debug_message(customer.id)
-			break
+			break;
 		}
 	}
 }
@@ -22,9 +22,9 @@ function addtofirstopenslot(customer,line) {
 function addtolastopenslot(customer,line) {
 	for (var i = array_length(line); i > 0; i--) {
 		if (line[i] == noone) {
-			line[i] = customer.id
+			line[i] = customer.id;
 			//show_debug_message(customer.id)
-			break
+			break;
 		}
 	}
 }
@@ -35,14 +35,14 @@ function whereinlineami(customer,line) {
 			return(i);
 		}
 	}
-	return(false);
+	return(-1);
 }
 
 function outofline(customer,line) {
 	for (var i = 0; i < array_length(line); i++) {
 		if (line[i] == customer.id) {
-			line[i] = noone
-			break
+			line[i] = noone;
+			break;
 		}
 	}
 }

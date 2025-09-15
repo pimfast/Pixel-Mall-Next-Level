@@ -10,7 +10,7 @@ switch (room) {
 		if (global.mode == "game") {
 			//time go
 			var _daytimelength = 21; //default 21
-			var _minutelength = 15; //default 15
+			var _minutelength = 12; //default 12
 			var _hourlength = 60; //default 60
 			
 			if (time_hours < _daytimelength) {time_seconds++;}
@@ -19,7 +19,11 @@ switch (room) {
 			if (time_minutes >= _hourlength) {time_minutes = 0; time_hours++;}
 			
 			if (alarm_get(0) == -1) {
-				alarm[0] = 840; //alarm_set(0,irandom_range(300,1500))
+				if (global.level <= 10) {
+					alarm[0] = global.levelcustomerrate[global.level]; //alarm_set(0,irandom_range(300,1500))
+				} else {
+					alarm[0] = global.levelcustomerrate[10];
+				}
 			}
 			
 			//time stop
