@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sfx_pixelmall_click",
+  "audioGroupId":{
+    "name":"ag_sfx",
+    "path":"audiogroups/ag_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.094331,
+  "name":"sfx_pixelmall_click",
+  "parent":{
+    "name":"og",
+    "path":"folders/Sounds/sfx/og.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_pixelmall_click.ogg",
+  "type":0,
+  "volume":1.0,
+}
