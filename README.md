@@ -1,3 +1,3 @@
-Download and play the game:
+Download and play the current build:
 
 [pmnl.zip](https://www.mediafire.com/file/rl6rvdta26vgwi1/pmnl.zip/file "Download the game!")
