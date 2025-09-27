@@ -1,27 +1,35 @@
 /// @desc
 
-if (dir == "open") {
-	//open
-	if (image_xscale < 1) {
-		image_xscale += 0.10;
+var _scale = image_xscale;
+var _animpositions = [0,1.2,1];
+var _animsp = 0.10; //factors of 10 only
+if (dir = -1) && (targetpos == 1) {_animsp = 0.05};
+if (dir = 1) && (targetpos == 2) {_animsp = 0.05};
+
+if (_scale != _animpositions[targetpos]) {
+	if (image_xscale < _animpositions[targetpos]) {
+		image_xscale += _animsp;
+		image_yscale += _animsp;
 	}
-	if (image_yscale < 1) {
-		image_yscale += 0.10;
+	if (_scale > _animpositions[targetpos]) {
+		image_xscale -= _animsp;
+		image_yscale -= _animsp;
 	}
 } else {
-	//close
-	if (image_xscale > 0) {
-		image_xscale -= 0.10;
-	}
-	if (image_yscale > 0) {
-		image_yscale -= 0.10;
-	}
-	if (image_xscale <= 0) && (image_yscale <= 0) {
-		instance_destroy(confirmbutton);
-		instance_destroy(buymorebutton);
-		instance_destroy(closebutton);
-		instance_destroy();
-		exit;
+	if (dir == 1) {
+		if (targetpos+1 < array_length(_animpositions)) {
+			targetpos += 1;
+		}
+	} else {
+		if (targetpos > 0) {
+			targetpos -= 1;
+		} else {
+			instance_destroy(confirmbutton);
+			instance_destroy(buymorebutton);
+			instance_destroy(closebutton);
+			instance_destroy();
+			exit;
+		}
 	}
 }
 confirmbutton.x = x-(75*image_xscale);

@@ -30,7 +30,7 @@ leveltime = [0,4,3.5,3,2.5,2];
 level = -1; //0 = not purchased. -1 = not available for purchase. -2 = nothin, not high enough
 
 lvl0sprite = spr_ndv02;
-lvlminus1sprite = spr_ndv03;
+lvlminus1sprite = spr_ndv04;
 
 if (level >= 0) {
 servicecharge = levelcharge[level];

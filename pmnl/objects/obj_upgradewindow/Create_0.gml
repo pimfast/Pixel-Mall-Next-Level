@@ -2,7 +2,9 @@
 
 image_xscale = 0;
 image_yscale = 0;
-dir = "open";
+dir = 1; //1 = forward, -1 = backward
+targetpos = 0;
+
 audio_play_sound(sfx_pixelmall_upgrade,1,0);
 
 confirmbutton = instance_create_depth(room_width/2,room_height/2,-200,obj_buttonconfirm);

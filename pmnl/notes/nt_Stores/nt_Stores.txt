@@ -47,4 +47,4 @@ indoor playground (upgraded versions give better ratings but the pay is always 0
 
 janitors closet (does nothing. upgraded versions do more nothing)
 
-bathroom (customer can't go unless outside view. make sure you they're outta sight!)
+bathroom (customer can't go unless off-screen. make sure that they're outta sight!)

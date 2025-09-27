@@ -1,0 +1,3 @@
+/// @desc
+
+solution = 1;

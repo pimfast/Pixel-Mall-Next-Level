@@ -33,7 +33,7 @@ if (variable_instance_exists(selectedmallpart.id,"levelpic")) {
 } else {
 	if (object_get_parent(selectedmallpart.object_index) == obj_employeeparent) {
 		//employees use unique purchase menu images but they stay the same every level
-		_s = asset_get_index("spr_"+selectedmallpart.employeename+"_hireicon");
+		_s = asset_get_index("spr_"+string(selectedmallpart.employeename)+"_hireicon");
 	} else {
 		//for shops
 		_s = spr_shopupgradebg;

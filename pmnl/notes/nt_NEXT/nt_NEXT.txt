@@ -2,17 +2,21 @@ FIND PIXEL MALL CUSTOMER INTERVAL TIME DATA
 also find how exactly you unlock new stores when you level up.
 so just find the leveling up code
 
-ADD SUPPORT FOR UNIQUE CUSTOMER INTERVAL TIME BASED ON PLAYER LEVEL
-also properly implement the unlocking of new stores
-
 SET UP THE MUSIC PLAYER
-find out exactly how long it's supposed to keep customers happy
+find out exactly how long it's supposed to keep customers happy and find out how exactly that works
 
 SET UP ELEVATOR
-probably have to override some more of the employeeparent code
+probably have to change some of the employeeparent code
 
 CHANGE "NAME" VARIABLE TO SOMETHING LESS GENERIC
 rn i'm noticing the color of the variable text change to red in some places so just trying to avoid problems
 
-MAKE THE SECOND STAGE + CAMERA CONTROLS
+ADD SAVING
+it sucks real bad that progress gets reset if you even just return to the title screen
+
+SMOOTH BUTTON ANIMATIONS
+turn the menu open animation code into a script and apply it to the buttons in the menus and title
+upgradewindow code will have to be changed since it directly sets the imagescale of the buttons every frame
+
+MAKE THE SECOND SECTION + CAMERA CONTROLS
 need to divide this task into smaller ones

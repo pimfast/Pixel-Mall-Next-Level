@@ -9,14 +9,14 @@ if (!currencytype) {
 		audio_play_sound(sfx_pixelmall_moneyUp,1,0);
 		changemoney(selectioncost * -1);
 		mallpartlevelup(upgradewindow.selectedmallpart);
-		upgradewindow.dir = "close";
+		upgradewindow.dir = -1;
 	}
 } else {
 	if (global.pixelmoney >= selectioncost) {
 		audio_play_sound(sfx_pixelmall_moneyUp,1,0);
 		changepixelmoney(selectioncost * -1);
 		mallpartlevelup(upgradewindow.selectedmallpart);
-		upgradewindow.dir = "close";
+		upgradewindow.dir = -1;
 	}
 }
 audio_play_sound(sfx_pixelmall_click,1,0);
