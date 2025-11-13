@@ -1,3 +1,3 @@
 /// @desc
 
-upgradewindow = noone
+upgradewindow = noone;

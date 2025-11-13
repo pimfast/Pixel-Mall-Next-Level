@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_customer_7_talk_normal",
   "bboxMode":0,
   "bbox_bottom":32,
@@ -12,10 +12,10 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"43494a08-17a1-4eb8-b2a1-0b9dc53b478c","name":"43494a08-17a1-4eb8-b2a1-0b9dc53b478c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"9f4c36b1-6ac9-4a04-95ca-ad8f01a9f8c7","name":"9f4c36b1-6ac9-4a04-95ca-ad8f01a9f8c7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"355ef0de-992d-440d-9bb4-9f33568fdeb8","name":"355ef0de-992d-440d-9bb4-9f33568fdeb8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"03b69547-f062-446c-85ff-d41509ffed72","name":"03b69547-f062-446c-85ff-d41509ffed72","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"43494a08-17a1-4eb8-b2a1-0b9dc53b478c","name":"43494a08-17a1-4eb8-b2a1-0b9dc53b478c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"9f4c36b1-6ac9-4a04-95ca-ad8f01a9f8c7","name":"9f4c36b1-6ac9-4a04-95ca-ad8f01a9f8c7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"355ef0de-992d-440d-9bb4-9f33568fdeb8","name":"355ef0de-992d-440d-9bb4-9f33568fdeb8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"03b69547-f062-446c-85ff-d41509ffed72","name":"03b69547-f062-446c-85ff-d41509ffed72","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -71,18 +71,10 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"43494a08-17a1-4eb8-b2a1-0b9dc53b478c","path":"sprites/spr_customer_7_talk_normal/spr_customer_7_talk_normal.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"06abc4a6-19db-48d5-83e1-e131010c6e18","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9f4c36b1-6ac9-4a04-95ca-ad8f01a9f8c7","path":"sprites/spr_customer_7_talk_normal/spr_customer_7_talk_normal.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"41db81bb-4cb6-485d-8f34-d1c3cd88fda4","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"355ef0de-992d-440d-9bb4-9f33568fdeb8","path":"sprites/spr_customer_7_talk_normal/spr_customer_7_talk_normal.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0b640dc5-53e5-4620-b955-6c6ad4e5da4c","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"03b69547-f062-446c-85ff-d41509ffed72","path":"sprites/spr_customer_7_talk_normal/spr_customer_7_talk_normal.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e91bca29-b5f5-40c3-a157-88ee6a5b2a4b","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"43494a08-17a1-4eb8-b2a1-0b9dc53b478c","path":"sprites/spr_customer_7_talk_normal/spr_customer_7_talk_normal.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"06abc4a6-19db-48d5-83e1-e131010c6e18","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"9f4c36b1-6ac9-4a04-95ca-ad8f01a9f8c7","path":"sprites/spr_customer_7_talk_normal/spr_customer_7_talk_normal.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"41db81bb-4cb6-485d-8f34-d1c3cd88fda4","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"355ef0de-992d-440d-9bb4-9f33568fdeb8","path":"sprites/spr_customer_7_talk_normal/spr_customer_7_talk_normal.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"0b640dc5-53e5-4620-b955-6c6ad4e5da4c","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"03b69547-f062-446c-85ff-d41509ffed72","path":"sprites/spr_customer_7_talk_normal/spr_customer_7_talk_normal.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e91bca29-b5f5-40c3-a157-88ee6a5b2a4b","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

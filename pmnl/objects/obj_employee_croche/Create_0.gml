@@ -2,7 +2,7 @@
 
 event_inherited();
 
-name = "Croche";
+displayname = "Croche";
 leveldesc = ["Hire Croche to help you!",
 "Hire Croche to help you!",
 "Upgrade Croche to Lv2 for faster walking\nand serving speed",
@@ -37,4 +37,4 @@ level = 0; //0 = not purchased. -1 = not available for purchase. -2 = nothin, no
 if (level >= 0) {
 	walksp = (levelwalksp[level]);
 	servicesp = levelservicesp[level];
-};
+}

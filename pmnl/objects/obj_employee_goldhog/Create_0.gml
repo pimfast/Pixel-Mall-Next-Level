@@ -2,7 +2,7 @@
 
 event_inherited();
 
-name = "Goldhog";
+displayname = "Goldhog";
 leveldesc = ["Goldhog automatically collects money",
 "Goldhog automatically collects money",
 "Upgrade Goldhog to make him collects\nmoney faster",	//so...

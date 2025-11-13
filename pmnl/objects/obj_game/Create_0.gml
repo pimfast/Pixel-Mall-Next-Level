@@ -24,6 +24,4 @@ startofdayrating = 0;
 
 //current_day
 
-moneychange = noone;
-
 global.debugmode = false;

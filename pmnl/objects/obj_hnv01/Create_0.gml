@@ -2,7 +2,7 @@
 
 event_inherited();
 
-name = "Music Shop";
+displayname = "Music Shop";
 leveldesc = [0,
 "Service Charge $10",
 "Service Charge $10 > $20\nShorter serving time",

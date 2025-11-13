@@ -5,7 +5,7 @@ event_inherited();
 labelX = -20;
 labelY = -20;
 
-name = "Counter";
+displayname = "Counter";
 levelpic = [0,
 0,
 spr_pic_counter01_lvl2,
@@ -37,9 +37,6 @@ leveltime = [0,1,0.8,0.6,0.4,0.25];
 
 //set the level
 level = 1; //0 = not purchased. -1 = not available for purchase. -2 = nothin, not high enough
-
-//lvl0sprite = spr_ndv01;
-//lvlminus1sprite = spr_ndv03;
 
 servicecharge = levelcharge[level];
 servicerating = levelrating[level];

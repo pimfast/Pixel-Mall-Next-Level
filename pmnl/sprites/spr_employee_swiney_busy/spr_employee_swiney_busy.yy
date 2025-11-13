@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_employee_swiney_busy",
   "bboxMode":0,
   "bbox_bottom":28,
@@ -12,10 +12,10 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"3a514dca-182e-41b9-8d6b-94746a170448","name":"3a514dca-182e-41b9-8d6b-94746a170448","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"290037a3-309e-455e-a65e-fe5d5b899c39","name":"290037a3-309e-455e-a65e-fe5d5b899c39","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f4a5236e-5957-4a1e-a88c-4fd55dbddab8","name":"f4a5236e-5957-4a1e-a88c-4fd55dbddab8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"2d5580e4-e7d2-448a-8ac9-bd4bbff33fc2","name":"2d5580e4-e7d2-448a-8ac9-bd4bbff33fc2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3a514dca-182e-41b9-8d6b-94746a170448","name":"3a514dca-182e-41b9-8d6b-94746a170448","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"290037a3-309e-455e-a65e-fe5d5b899c39","name":"290037a3-309e-455e-a65e-fe5d5b899c39","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f4a5236e-5957-4a1e-a88c-4fd55dbddab8","name":"f4a5236e-5957-4a1e-a88c-4fd55dbddab8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2d5580e4-e7d2-448a-8ac9-bd4bbff33fc2","name":"2d5580e4-e7d2-448a-8ac9-bd4bbff33fc2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -71,18 +71,10 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3a514dca-182e-41b9-8d6b-94746a170448","path":"sprites/spr_employee_swiney_busy/spr_employee_swiney_busy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"eaaca868-f317-4c19-bdb4-ff4814028ac0","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"290037a3-309e-455e-a65e-fe5d5b899c39","path":"sprites/spr_employee_swiney_busy/spr_employee_swiney_busy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7c4343ff-b03b-4162-aab6-dc539bed7328","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f4a5236e-5957-4a1e-a88c-4fd55dbddab8","path":"sprites/spr_employee_swiney_busy/spr_employee_swiney_busy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a26c6fc5-927f-429f-8f70-1f01c8e052ea","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2d5580e4-e7d2-448a-8ac9-bd4bbff33fc2","path":"sprites/spr_employee_swiney_busy/spr_employee_swiney_busy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"340f1bee-4b31-4d52-a2f4-12b02ea70473","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3a514dca-182e-41b9-8d6b-94746a170448","path":"sprites/spr_employee_swiney_busy/spr_employee_swiney_busy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"eaaca868-f317-4c19-bdb4-ff4814028ac0","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"290037a3-309e-455e-a65e-fe5d5b899c39","path":"sprites/spr_employee_swiney_busy/spr_employee_swiney_busy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7c4343ff-b03b-4162-aab6-dc539bed7328","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"f4a5236e-5957-4a1e-a88c-4fd55dbddab8","path":"sprites/spr_employee_swiney_busy/spr_employee_swiney_busy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"a26c6fc5-927f-429f-8f70-1f01c8e052ea","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2d5580e4-e7d2-448a-8ac9-bd4bbff33fc2","path":"sprites/spr_employee_swiney_busy/spr_employee_swiney_busy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"340f1bee-4b31-4d52-a2f4-12b02ea70473","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

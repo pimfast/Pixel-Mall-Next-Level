@@ -20,9 +20,11 @@ if (room == rm_title) {
 	var selectioncost = upgradewindow.selectedmallpart.levelprice[upgradewindow.mallpartlevel+1];
 	
 	//free money.
-	if (!currencytype) {
-		changemoney(selectioncost);
-	} else {
-		changepixelmoney(selectioncost);
+	if (upgradewindow.image_xscale == upgradewindow.animpositions[upgradewindow.targetpos]) {
+		if (!currencytype) {
+			changemoney(selectioncost);
+		} else {
+			changepixelmoney(selectioncost);
+		}
 	}
 }

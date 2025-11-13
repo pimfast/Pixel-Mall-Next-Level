@@ -2,6 +2,10 @@
 
 draw_self();
 
+if (global.debugmode == true) {
+	draw_text(room_width/2,room_height-10,string(image_xscale));
+}
+
 draw_set_font(fnt_2);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
@@ -11,7 +15,7 @@ draw_set_color(c_dkgray);
 //show_debug_message(string(selectedmallpart.leveldesc));
 
 //preferably we would set this in the create event but then it wouldn't be able to access the data
-var _title = selectedmallpart.name+" Lv"+string(mallpartlevel+1);
+var _title = selectedmallpart.displayname+" Lv"+string(mallpartlevel+1);
 var _desc = selectedmallpart.leveldesc[mallpartlevel+1];
 var _price = selectedmallpart.levelprice[mallpartlevel+1];
 

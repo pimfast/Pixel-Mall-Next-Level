@@ -16,16 +16,14 @@ if (_button == noone) {
 	} else {
 		//check for customers
 		var _customer = instance_position(mouse_x,mouse_y,obj_customer);
-		if (_customer != noone) && (_customer.state != "waitingfor_employee") {
+		if (_customer != noone) && (_customer.moveable == true) {
 			//run customer script
-			if (_customer.moveable == true) {
-				audio_play_sound(sfx_pixelmall_dragStart,1,0);
-				global.heldcustomer = _customer.id;
-				_customer.beingmoved = true;
-				_customer.image_blend = make_color_hsv(255,0,50);
-				_customer.image_xscale *= 1.25;
-				_customer.image_yscale *= 1.25;
-			}
+			audio_play_sound(sfx_pixelmall_dragStart,1,0);
+			global.heldcustomer = _customer.id;
+			_customer.beingmoved = true;
+			_customer.image_blend = make_color_hsv(255,0,50);
+			_customer.image_xscale *= 1.25;
+			_customer.image_yscale *= 1.25;
 		} else {
 			//check for stores
 			var _shop = instance_position(mouse_x,mouse_y,obj_shopparent);
@@ -89,6 +87,12 @@ if (_button == noone) {
 							audio_play_sound(sfx_pixelmall_dragStart,1,0);
 						}
 					}
+				}
+			} else {
+				//check for other mall items
+				var _misc = instance_position(mouse_x,mouse_y,obj_miscpartparent);
+				if (_misc != noone) {
+					
 				}
 			}
 		}

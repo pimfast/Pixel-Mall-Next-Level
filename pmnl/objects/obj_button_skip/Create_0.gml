@@ -1,5 +1,5 @@
 /// @desc
 
 if (!global.debugmode) {
-	instance_destroy()
+	instance_destroy();
 }

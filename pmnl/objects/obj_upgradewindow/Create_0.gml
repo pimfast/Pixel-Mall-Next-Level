@@ -3,6 +3,7 @@
 image_xscale = 0;
 image_yscale = 0;
 dir = 1; //1 = forward, -1 = backward
+animpositions = [0,1.2,1];
 targetpos = 0;
 
 audio_play_sound(sfx_pixelmall_upgrade,1,0);

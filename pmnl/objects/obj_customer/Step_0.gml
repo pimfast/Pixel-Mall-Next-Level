@@ -42,7 +42,7 @@ switch (state) {
 		//if (spotinline == false) {
 		//	break
 		//}
-		if (x > (70+32*(spotinline))) {
+		if (x > (70+(32*spotinline))) {
 			x -= walksp;
 		} else {
 			state = "waitingfor_shop";
@@ -52,10 +52,7 @@ switch (state) {
 			customerbubble = instance_create_layer(x,y-40,"Game",obj_customerbubble);
 			customerbubble.sprite_index = asset_get_index("spr_customerbubble_"+string(desiredstore));
 			customerbubble.thinker = self.id;
-			alarm_set(0,360)
-			if (class == "vip") {
-				alarm_set(0,alarm_get(0)/2);
-			}
+			alarm[0] = patienceTime;
 			alarm[1] = -1;
 		}
 		break;
@@ -127,11 +124,11 @@ switch (state) {
 				x += walksp;
 			} else {
 				//i think i need to finish the line thing before this can be foolproof
-				shopimat = obj_counter01
+				shopimat = obj_counter01;
 				//if i am at the front of the checkout line set it to be serving me
 				if (self.id == array_first(global.checkoutline)) {
 					shopimat.serving = self.id;
-					alarm_set(alarm[1],360);
+					alarm[0] = patienceTime;
 					alarm[1] = -1;
 					customerbubble.sprite_index = spr_customerbubble_request;
 					state = "waitingfor_employee";
@@ -153,9 +150,14 @@ switch (state) {
 				image_xscale = 1;
 				x -= walksp;
 			} else {
+				//target Y is always lower, go down the elevator
 				sprite_index = asset_get_index("spr_"+class+"_"+customertype+"_elevator_"+substate);
 				image_xscale = -1;
-				y += elvsp;
+				if (y + elvsp > 463) {
+					y = 463;
+				} else {
+					y += elvsp;
+				}
 			}
 		}
 		break;
@@ -173,12 +175,12 @@ switch (state) {
 				if (shopimat.myemployee != noone) {
 					//needs to be in this if statement for some probably really good reason
 					shopimat.myemployee.attending = noone;
-				}
-					show_debug_message(asset_get_index("spr_"+class+"_"+customertype+"_walk_"+substate));
-				if (shopimat.myemployee.employeename != "goldhog") {
-					//mark the checkout as not attended by employee
-					shopimat.attended = false
-					shopimat.myemployee = noone
+					
+					if (shopimat.myemployee.employeename != "goldhog") {
+						//mark the checkout as not attended by employee
+						shopimat.attended = false;
+						shopimat.myemployee = noone;
+					}
 				}
 			}
 			//shopimat has to be set to noone in here otherwise cashier gets stuck

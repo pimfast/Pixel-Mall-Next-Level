@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"sfx_pixelmall_dragSnap",
   "audioGroupId":{
     "name":"ag_sfx",
     "path":"audiogroups/ag_sfx",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.108844,
+  "duration":0.120453514,
+  "exportDir":"",
   "name":"sfx_pixelmall_dragSnap",
   "parent":{
     "name":"og",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sfx_pixelmall_dragSnap.ogg",
-  "type":0,
-  "volume":1.0,
+  "volume":0.1,
 }

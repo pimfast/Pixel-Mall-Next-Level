@@ -67,10 +67,23 @@ function mallpartlevelup(tbluMallpart) {
 		
 		tbluMallpart.servicesp = tbluMallpart.levelservicesp[tbluMallpart.level];
 		tbluMallpart.walksp = tbluMallpart.levelwalksp[tbluMallpart.level];
-	} else {
+	} 
+	if (object_get_parent(tbluMallpart.object_index) == obj_shopparent) {
 		tbluMallpart.sprite_index = asset_get_index("spr_store_"+string(upgradewindow.selectedmallpart.shopname)+"_lvl"+string(upgradewindow.selectedmallpart.level));
 		tbluMallpart.image_alpha = 1;
 	
+		tbluMallpart.servicecharge = tbluMallpart.levelcharge[tbluMallpart.level];
+		tbluMallpart.servicerating = tbluMallpart.levelrating[tbluMallpart.level];
+		tbluMallpart.servicetime = tbluMallpart.leveltime[tbluMallpart.level];
+	}
+	if (object_get_parent(tbluMallpart.object_index) == obj_miscpartparent) {
+		tbluMallpart.sprite_index = asset_get_index("spr_"+string(upgradewindow.selectedmallpart.miscpartname)+"_lvl"+string(upgradewindow.selectedmallpart.level));
+		tbluMallpart.image_alpha = 1;
+		if (variable_instance_exists(tbluMallpart.id,"myfg")) {
+			tbluMallpart.myfg.sprite_index = asset_get_index("spr_"+string(upgradewindow.selectedmallpart.miscpartname)+"_lvl"+string(upgradewindow.selectedmallpart.level)+"b");
+			tbluMallpart.myfg.image_alpha = 1;
+		}
+		
 		tbluMallpart.servicecharge = tbluMallpart.levelcharge[tbluMallpart.level];
 		tbluMallpart.servicerating = tbluMallpart.levelrating[tbluMallpart.level];
 		tbluMallpart.servicetime = tbluMallpart.leveltime[tbluMallpart.level];
@@ -85,18 +98,18 @@ function considerlevelup() {
 				//default level, start with 4 owned and 4 available for purchase
 				break;
 			case 2:
-				//nothing? i think you only get more customers
+				//nothing
 				changepixelmoney(+50);
 				obj_lobby01.sprite_index = spr_lobby01_lvl2;
 				break;
 			case 3:
-				obj_hnv01.level = 0;
-				obj_hnv02.level = 0;
+				//nothing
+				changepixelmoney(+50);
 				obj_lobby01.sprite_index = spr_lobby01_lvl3;
 				break;
 			case 4:
-				//nothing? i think you only get more customers
-				changepixelmoney(+50);
+				obj_hnv01.level = 0;
+				obj_hnv02.level = 0;
 				obj_lobby01.sprite_index = spr_lobby01_lvl4;
 				break;
 			case 5:
@@ -107,18 +120,20 @@ function considerlevelup() {
 			case 6:
 				obj_w01.level = 0;
 				obj_w02.level = 0;
+				obj_w03.level = 0;
+				obj_w04.level = 0;
 				obj_lobby01.sprite_index = spr_lobby01_lvl6;
 				break;
 			case 7:
-				obj_w03.level = 0;
+				//nothing
 				obj_lobby01.sprite_index = spr_lobby01_lvl7;
 				break;
 			case 8:
-				obj_w04.level = 0;
+				//nothin
 				obj_lobby01.sprite_index = spr_lobby01_lvl8;
 				break;
 			case 9:
-				//pretty sure nothing
+				//nothing
 				obj_lobby01.sprite_index = spr_lobby01_lvl9;
 				break;
 			case 10:

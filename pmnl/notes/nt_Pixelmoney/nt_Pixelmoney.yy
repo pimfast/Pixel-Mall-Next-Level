@@ -1,5 +1,5 @@
 {
-  "$GMNotes":"",
+  "$GMNotes":"v1",
   "%Name":"nt_Pixelmoney",
   "name":"nt_Pixelmoney",
   "parent":{

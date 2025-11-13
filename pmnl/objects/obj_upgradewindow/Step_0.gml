@@ -1,23 +1,22 @@
 /// @desc
 
 var _scale = image_xscale;
-var _animpositions = [0,1.2,1];
-var _animsp = 0.10; //factors of 10 only
+var _animsp = 0.10; //can only be factors of 10 that are divided by 10
 if (dir = -1) && (targetpos == 1) {_animsp = 0.05};
 if (dir = 1) && (targetpos == 2) {_animsp = 0.05};
 
-if (_scale != _animpositions[targetpos]) {
-	if (image_xscale < _animpositions[targetpos]) {
+if (_scale != animpositions[targetpos]) {
+	if (image_xscale < animpositions[targetpos]) {
 		image_xscale += _animsp;
 		image_yscale += _animsp;
 	}
-	if (_scale > _animpositions[targetpos]) {
+	if (_scale > animpositions[targetpos]) {
 		image_xscale -= _animsp;
 		image_yscale -= _animsp;
 	}
 } else {
 	if (dir == 1) {
-		if (targetpos+1 < array_length(_animpositions)) {
+		if (targetpos+1 < array_length(animpositions)) {
 			targetpos += 1;
 		}
 	} else {

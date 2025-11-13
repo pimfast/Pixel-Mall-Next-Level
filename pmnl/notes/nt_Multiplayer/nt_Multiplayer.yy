@@ -1,5 +1,5 @@
 {
-  "$GMNotes":"",
+  "$GMNotes":"v1",
   "%Name":"nt_Multiplayer",
   "name":"nt_Multiplayer",
   "parent":{

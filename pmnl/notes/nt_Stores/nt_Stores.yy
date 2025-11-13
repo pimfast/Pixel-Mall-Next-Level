@@ -1,5 +1,5 @@
 {
-  "$GMNotes":"",
+  "$GMNotes":"v1",
   "%Name":"nt_Stores",
   "name":"nt_Stores",
   "parent":{

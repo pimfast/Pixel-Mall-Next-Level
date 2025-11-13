@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"mus_pixelmall_consumables_wildcard",
   "audioGroupId":{
     "name":"ag_mus",
     "path":"audiogroups/ag_mus",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":8.0,
+  "exportDir":"",
   "name":"mus_pixelmall_consumables_wildcard",
   "parent":{
     "name":"music",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"mus_pixelmall_consumables_wildcard.ogg",
-  "type":0,
-  "volume":1.0,
+  "volume":0.1,
 }

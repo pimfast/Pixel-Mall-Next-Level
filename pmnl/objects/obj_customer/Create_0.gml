@@ -19,8 +19,8 @@ tutorialmode = false;
 addtofirstopenslot(self,global.customerline);
 //line_pos
 
-walksp = 1; //doesn't work if it's increased more :( needs employee parents code
-elvsp = walksp; /**obj_elevator.spd*/
+walksp = 1; //doesn't work if altered
+elvsp = obj_elevator01.levelspeed[obj_elevator01.level];
 
 moveable = false;
 beingmoved = false;
@@ -30,9 +30,11 @@ billrating = 0;
 if (irandom(99) == 0) {
 	class = "vip";
 	shopstops = 3;
+	patienceTime = 180;
 } else {
 	class = "customer";
 	shopstops = 1;
+	patienceTime = 360;
 }
 if (irandom(5) == 0) {shopstops++;}
 if (irandom(5) == 0) {shopstops++;}

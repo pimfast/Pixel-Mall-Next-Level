@@ -2,7 +2,7 @@
 
 event_inherited();
 
-name = "Igloo";
+displayname = "Igloo";
 leveldesc = ["Hire Igloo to help you!",
 "Hire Igloo to help you!",
 "Upgrade Igloo to Lv2 for faster walking\nand serving speed",

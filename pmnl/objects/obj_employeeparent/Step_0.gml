@@ -6,6 +6,7 @@ if (level <= 0) {
 
 var _elvposition = 32;
 var _effWalksp = walksp / 60;
+var _elvsp = obj_elevator01.levelspeed[obj_elevator01.level];
 
 if (alarm[0] == -1) {
 	sprite_index = asset_get_index("spr_employee_"+employeename+"_idle");
@@ -89,19 +90,19 @@ if (target != noone) {
 			//if it's lower, go down the elevator
 			if (_targety > y) {
 				sprite_index = asset_get_index("spr_employee_"+employeename+"_elevator");
-				if (y - elvsp > _targety) {
+				if (y - _elvsp > _targety) {
 					y = _targety;
 				} else {
-					y += elvsp;
+					y += _elvsp;
 				}
 			}
 			//if it's higher, go up the elevator
 			if (_targety < y) {
 				sprite_index = asset_get_index("spr_employee_"+employeename+"_elevator");
-				if (y - elvsp < _targety) {
+				if (y - _elvsp < _targety) {
 					y = _targety;
 				} else {
-					y -= elvsp;
+					y -= _elvsp;
 				}
 			}
 		}

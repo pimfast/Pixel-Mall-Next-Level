@@ -1,15 +1,14 @@
 FIND PIXEL MALL CUSTOMER INTERVAL TIME DATA
-also find how exactly you unlock new stores when you level up.
-so just find the leveling up code
+customer interval is determined using the score value. it's not a set thing per level
 
 SET UP THE MUSIC PLAYER
 find out exactly how long it's supposed to keep customers happy and find out how exactly that works
 
 SET UP ELEVATOR
-probably have to change some of the employeeparent code
+find the data. no idea how fast it's supposed to go at each level
 
-CHANGE "NAME" VARIABLE TO SOMETHING LESS GENERIC
-rn i'm noticing the color of the variable text change to red in some places so just trying to avoid problems
+ADD EVENTS
+every 5 days is a WOWDay, every 10 days is a VIPDay
 
 ADD SAVING
 it sucks real bad that progress gets reset if you even just return to the title screen

@@ -55,6 +55,16 @@ function startday() {
 			sprite_index = noone;
 		}
 	}
+	with (obj_miscpartparent) {
+		if (level == 0) {
+			sprite_index = noone;
+		} else {
+			//refresh music player uses
+			if (variable_instance_exists(self.id,"myusecount")) {
+				myusecount = leveluses[level];
+			}
+		}
+	}
 	
 	obj_counter01.mask_index = spr_store_counter01_lvl1;
 	
@@ -109,6 +119,12 @@ function startnight() {
 			sprite_index = asset_get_index("spr_employee_"+string(employeename)+"_idle");
 		}
 	}
+	with (obj_miscpartparent) {
+		if (level <= 0) {
+			image_alpha = 0.5;
+			sprite_index = asset_get_index("spr_"+string(miscpartname)+"_lvl1");
+		}
+	}
 	with (obj_upgradeableparent) {
 		if (level >= 0) {
 			mypurchaseupgradelabel = instance_create_depth(x+labelX,y+labelY,0,obj_purchaseupgradelabel);
@@ -141,18 +157,6 @@ function startnight() {
 	global.mode = "upgrade";
 }
 
-/// instance_nth_nearest(x,y,obj,n)
-//
-//  Returns the id of the nth nearest instance of an object
-//  to a given point or noone if none is found.
-//
-//      x,y       point coordinates, real
-//      obj       object index (or all), real
-//      n         proximity, real
-//
-/// GMLscripts.com/license
-//for store
-
 function findclosestemployee(pointx,pointy,object,n) {
     n = min(max(1,n),instance_number(object));
     list = ds_priority_create();
@@ -161,4 +165,23 @@ function findclosestemployee(pointx,pointy,object,n) {
     repeat (n) nearest = ds_priority_delete_min(list);
     ds_priority_destroy(list);
     return nearest;
+}
+
+function animatebutton() {
+	
+}
+
+function savegame() {
+	var _savefile = file_text_open_write(working_directory + "dontcheat.plz");
+	with (obj_upgradeableparent) {
+		file_text_write_string(_savefile, level);
+		file_text_writeln(_savefile)
+	}
+	file_text_close(_savefile);
+}
+
+function savesettings() {
+	var _options = file_text_open_write(working_directory + "settings.txt");
+	file_text_write_string(_options, audio_group_get_gain(ag_mus));
+	file_text_close(_options);
 }

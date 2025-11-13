@@ -2,7 +2,7 @@
 
 event_inherited();
 
-name = "Pinky";
+displayname = "Pinky";
 leveldesc = ["Hire Pinky to help you!",
 "Hire Pinky to help you!",
 "Upgrade Pinky to Lv2 for faster walking\nand serving speed",
