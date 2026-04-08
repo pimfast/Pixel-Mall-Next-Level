@@ -9,4 +9,5 @@ if (!instance_exists(obj_button_tutorial)) {
 		audio_group_set_gain(ag_mus,1,0)
 		audio_group_set_gain(ag_sfx,1,0)
 	}
+	savesettings();
 }

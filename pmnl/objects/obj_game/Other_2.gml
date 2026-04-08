@@ -10,6 +10,29 @@ global.day = 1;
 
 global.mode = "game";
 
+//load the first save file found if it exists, otherwise make a new user
+//var _savefile = (working_directory + "*.sav");
+var _savefile = filename_name(file_find_first("*.sav", 0));
+
+if (file_exists(_savefile)) {
+	var _username = string_delete(filename_name(_savefile),-1,-4)
+	show_debug_message(_username)
+	
+	loadgame(_username)
+	global.gameUser = _username;
+} else {
+	savegame("Guest");
+	global.gameUser = "Guest";
+}
+
+//load settings
+var _optionsfile = filename_name(working_directory + "settings.txt");
+if (file_exists(_optionsfile)) {
+	loadsettings();
+} else {
+	savesettings();
+}
+
 //set requirements and specifics
 global.levelmoneyreq = [0, //lvl 0 n/a
 0, //lvl 1 default

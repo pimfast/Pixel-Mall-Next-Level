@@ -13,6 +13,9 @@ function changemoney(moneystatement) {
 		drawpoint.drawnumber = (global.money - moneybeforestatement);
 		if (moneystatement > 0) {drawpoint.txtcol = c_lime;}
 		if (moneystatement < 0) {drawpoint.txtcol = c_red;}
+	} else {
+		//changed money during upgrade time, save game
+		savegame(global.gameUser);
 	}
 }
 
@@ -28,6 +31,9 @@ function changerating(ratingstatement) {
 		drawpoint.drawnumber = (global.rating - ratingbeforestatement);
 		if (ratingstatement > 0) {drawpoint.txtcol = c_lime;}
 		if (ratingstatement < 0) {drawpoint.txtcol = c_red;}
+	} else {
+		//changed rating (somehow) during upgrade time, save game
+		savegame(global.gameUser);
 	}
 }
 
@@ -44,6 +50,9 @@ function changepixelmoney(pixelmoneystatement) {
 		drawpoint.drawnumber = (global.pixelmoney - pixelmoneybeforestatement);
 		if (pixelmoneystatement > 0) {drawpoint.txtcol = c_lime;}
 		if (pixelmoneystatement < 0) {drawpoint.txtcol = c_red;}
+	} else {
+		//changed pixel money during upgrade time, save game
+		savegame(global.gameUser);
 	}
 }
 

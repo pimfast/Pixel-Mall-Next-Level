@@ -83,6 +83,7 @@ function startnight() {
 	
 	audio_group_stop_all(ag_mus);
 	audio_play_sound(mus_pixelmall_upgrade,100,1);
+	obj_game.time = "End"
 	
 	//i still think
 	with (obj_shopparent) {
@@ -168,20 +169,64 @@ function findclosestemployee(pointx,pointy,object,n) {
 }
 
 function animatebutton() {
-	
+	//not sure what the idea is here.
 }
 
-function savegame() {
-	var _savefile = file_text_open_write(working_directory + "dontcheat.plz");
+function savegame(_username) {
+	var _savefile = file_text_open_write(working_directory + _username + ".sav");
+	file_text_write_real(_savefile, global.level);
+	file_text_writeln(_savefile);
+	file_text_write_real(_savefile, global.rating);
+	file_text_writeln(_savefile);
+	file_text_write_real(_savefile, global.money);
+	file_text_writeln(_savefile);
+	file_text_write_real(_savefile, global.pixelmoney);
+	file_text_writeln(_savefile);
+	file_text_write_real(_savefile, global.day);
+	file_text_writeln(_savefile);
 	with (obj_upgradeableparent) {
-		file_text_write_string(_savefile, level);
-		file_text_writeln(_savefile)
+		file_text_write_real(_savefile, level);
+		file_text_writeln(_savefile);
 	}
 	file_text_close(_savefile);
 }
 
 function savesettings() {
 	var _options = file_text_open_write(working_directory + "settings.txt");
-	file_text_write_string(_options, audio_group_get_gain(ag_mus));
+	file_text_write_string(_options, "Music volume:");
+	file_text_writeln(_options);
+	file_text_write_real(_options, audio_group_get_gain(ag_mus));
+	file_text_writeln(_options);
+	file_text_write_string(_options, "SFX volume:");
+	file_text_writeln(_options);
+	file_text_write_real(_options, audio_group_get_gain(ag_sfx));
+	file_text_close(_options);
+}
+
+function loadgame(_username) {
+	var _savefile = file_text_open_read(working_directory + _username + ".sav");
+	global.level = file_text_read_real(_savefile);
+	file_text_readln(_savefile);
+	global.rating = file_text_read_real(_savefile);
+	file_text_readln(_savefile);
+	global.money = file_text_read_real(_savefile);
+	file_text_readln(_savefile);
+	global.pixelmoney = file_text_read_real(_savefile);
+	file_text_readln(_savefile);
+	global.day = file_text_read_real(_savefile);
+	with (obj_upgradeableparent) {
+		level = file_text_read_real(_savefile);
+		file_text_readln(_savefile);
+	}
+	file_text_close(_savefile);
+}
+
+function loadsettings() {
+	var _options = file_text_open_read(working_directory + "settings.txt");
+	file_text_readln(_options);
+	audio_group_set_gain(ag_mus,file_text_read_real(_options));
+	file_text_readln(_options);
+	file_text_readln(_options);
+	audio_group_set_gain(ag_sfx,file_text_read_real(_options));
 	file_text_close(_options);
 }

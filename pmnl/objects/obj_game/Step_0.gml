@@ -34,7 +34,7 @@ switch (room) {
 		if (!audio_is_playing(mus_pixelmall_title) && !audio_is_playing(mus_pixelmallmaybe_musicbox)) {
 			audio_play_sound(mus_pixelmall_title,100,1);
 		}
-		break
+		break;
 	case rm_game:
 		if (global.mode == "game") {
 			//time go
