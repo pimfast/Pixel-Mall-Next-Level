@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"mus_pixelmallmaybe_musicbox",
+  "%Name":"mus_pixelmall_musicbox",
   "audioGroupId":{
     "name":"ag_mus",
     "path":"audiogroups/ag_mus",
@@ -12,7 +12,7 @@
   "conversionMode":0,
   "duration":14.341225,
   "exportDir":"",
-  "name":"mus_pixelmallmaybe_musicbox",
+  "name":"mus_pixelmall_musicbox",
   "parent":{
     "name":"music",
     "path":"folders/Sounds/music.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"mus_pixelmallmaybe_musicbox.ogg",
+  "soundFile":"mus_pixelmall_musicbox.ogg",
   "volume":0.1,
 }

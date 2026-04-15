@@ -39,7 +39,7 @@ leveltime = [0,15,15,15,15,15];
 
 leveluses = [0,1,3,5,7,9];
 active = false;
-activelength = 480; //random placeholder number
+activelength = 860; //random placeholder number
 bubrate = 30; //also random
 
 //set the level

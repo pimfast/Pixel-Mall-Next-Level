@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Level 1-10",
-    "path":"folders/Objects/Employees/Level 1-10.yy",
+    "path":"folders/Objects/Mall Parts/Employees/Level 1-10.yy",
   },
   "parentObjectId":{
     "name":"obj_employeeparent",

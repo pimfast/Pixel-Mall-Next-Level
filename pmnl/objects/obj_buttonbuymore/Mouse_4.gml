@@ -22,9 +22,13 @@ if (room == rm_title) {
 	//free money.
 	if (upgradewindow.image_xscale == upgradewindow.animpositions[upgradewindow.targetpos]) {
 		if (!currencytype) {
-			changemoney(selectioncost);
+			if (global.debugmode) {
+				changemoney(selectioncost);
+			}
 		} else {
-			changepixelmoney(selectioncost);
+			if (global.debugmode) {
+				changepixelmoney(selectioncost);
+			}
 		}
 	}
 }

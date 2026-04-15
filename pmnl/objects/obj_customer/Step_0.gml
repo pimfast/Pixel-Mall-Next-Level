@@ -38,10 +38,6 @@ switch (state) {
 	case "goingto_enter":
 		//walk to elevator
 		var spotinline = whereinlineami(self,global.customerline);
-		//v doesn't work because 0 and false are the same thing duh
-		//if (spotinline == false) {
-		//	break
-		//}
 		if (x > (70+(32*spotinline))) {
 			x -= walksp;
 		} else {
@@ -58,7 +54,7 @@ switch (state) {
 		break;
 	case "waitingfor_shop":
 		//request a random shop and show a bubble for it
-		moveable = true
+		moveable = true;
 		break;
 	case "waitingfor_employee":
 		//show a ! bubble unless there's an employee here,
@@ -82,30 +78,30 @@ switch (state) {
 		//check if space exists in the checkout line, if so, set it as yourself
 		moveable = false;
 		customerbubble.sprite_index = spr_customerbubble_linefull;
-		if (array_contains(global.checkoutline,noone)) {
+		if (global.checkoutline[3] == noone) {
 			state = "goingto_counter";
 			sprite_index = asset_get_index("spr_"+class+"_"+customertype+"_walk_"+substate);
-			addtofirstopenslot(self,global.checkoutline)
+			global.checkoutline[3] = id;
 			shopimat.serving = noone;
 			shopimat = noone;
 		}
 		break;
 	case "processing":
 		//do nothing. when employee is finished the state will be goingto_counter, goingto_exit, or waitingfor_employee
-		moveable = false
+		moveable = false;
 		if (shopimat == obj_counter01) {
 			if (shopimat.myemployee.alarm[0] == -1) {
 				//start talking
 				customerbubble.sprite_index = noone;
 				audio_play_sound(sfx_pixelmall_cashier,1,0);
-				shopimat.myemployee.alarm[0] = 60*shopimat.myemployee.servicesp;
+				shopimat.myemployee.alarm[0] = 60 * shopimat.servicetime * shopimat.myemployee.servicesp;
 			}
 		} else {
 			if (shopimat.myemployee.alarm[0] == -1) {
 				//start talking
 				customerbubble.sprite_index = spr_customerbubble_purchasing;
 				audio_play_sound(sfx_pixelmall_inStore,1,0);
-				shopimat.myemployee.alarm[0] = 180*shopimat.myemployee.servicesp;
+				shopimat.myemployee.alarm[0] = 60 * shopimat.servicetime * shopimat.myemployee.servicesp;
 			}
 		}
 		break;
@@ -116,36 +112,41 @@ switch (state) {
 		customerbubble.sprite_index = noone;
 		sprite_index = asset_get_index("spr_"+class+"_"+customertype+"_walk_"+substate);
 		
+		spotinline = whereinlineami(self,global.checkoutline);
+		
+		//check if i haven't claimed the front spot yet and if the place in the array below mine is a valid one
+		if (self.id != array_first(global.checkoutline)) && (spotinline-1 >= 0) {
+			//check if the spot in line ahead of my claimed spot isn't taken
+			if (global.checkoutline[spotinline-1] == noone) {
+				//claim it as mine
+				global.checkoutline[spotinline-1] = self.id;
+				global.checkoutline[spotinline] = noone;
+			}
+		}
+		
+		//check if i'm on the ground floor
 		if (y == 463) {
+			//flip my sprite to face right
 			image_xscale = -1;
 			
-			spotinline = whereinlineami(self,global.checkoutline)
+			//check if i'm at the spot in line i've claimed
 			if (x < (255-(32*spotinline))) {
 				x += walksp;
 			} else {
-				//i think i need to finish the line thing before this can be foolproof
 				shopimat = obj_counter01;
-				//if i am at the front of the checkout line set it to be serving me
-				if (self.id == array_first(global.checkoutline)) {
+				
+				//check if i claimed the front spot of the line and check if i'm actually there
+				if (self.id == array_first(global.checkoutline)) && (x == 255) {
+					//set checkout counter to be serving me
 					shopimat.serving = self.id;
 					alarm[0] = patienceTime;
 					alarm[1] = -1;
 					customerbubble.sprite_index = spr_customerbubble_request;
 					state = "waitingfor_employee";
-				} else {
-					//if i am not at the front of the line check if the next space is noone
-					//if it's not noone, do nothing
-					//if it is noone, set it as self and make the position it wasaa buhh noone
-					if (spotinline-1 >= 0) {
-						if (global.checkoutline[spotinline-1] == noone) {
-							global.checkoutline[spotinline-1] = self.id;
-							global.checkoutline[spotinline] = noone;
-							//this kinda works. though customers often cut in line at the checkout
-						}
-					}
 				}
 			}
 		} else {
+			//check if i'm not at the elevator yet
 			if (x > _elvposition) {
 				image_xscale = 1;
 				x -= walksp;

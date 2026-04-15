@@ -1,4 +1,4 @@
-/// @desc music & time handling
+/// @desc music, time, and game handling
 
 //mouse sprites
 var _touchingbutton = instance_position(mouse_x,mouse_y,obj_buttonparent);
@@ -22,7 +22,7 @@ if (!_touchingbutton) {
 	}
 }
 
-if (_touchingbutton) {
+if (_touchingbutton) && (_touchingbutton.object_index != obj_report) {
 	window_set_cursor(cr_handpoint);
 } else {
 	window_set_cursor(cr_default);
@@ -31,7 +31,7 @@ if (_touchingbutton) {
 
 switch (room) {
 	case rm_title:
-		if (!audio_is_playing(mus_pixelmall_title) && !audio_is_playing(mus_pixelmallmaybe_musicbox)) {
+		if (!audio_is_playing(mus_pixelmall_title) && !audio_is_playing(mus_pixelmall_musicbox)) {
 			audio_play_sound(mus_pixelmall_title,100,1);
 		}
 		break;
@@ -39,7 +39,7 @@ switch (room) {
 		if (global.mode == "game") {
 			//time go
 			var _daytimelength = 21; //closing time, default 21
-			var _minutelength = 12; //how many seconds make a minute, default 12
+			var _minutelength = 12; //how many seconds (frames) make a minute, default 12
 			var _hourlength = 60; //how many minutes make an hour, default 60
 			
 			if (time_hours < _daytimelength) {time_seconds++;}
@@ -52,7 +52,7 @@ switch (room) {
 				if (global.level <= 10) {
 					alarm[0] = (levelcustomerinterval[global.level] * 60); //alarm_set(0,irandom_range(300,1500))
 				} else {
-					alarm[0] = levelcustomerinterval[10];
+					alarm[0] = (levelcustomerinterval[10] * 60);
 				}
 			}
 			
@@ -116,10 +116,23 @@ switch (room) {
 							obj_reportarrow_satisfaction.sprite_index = noone;
 							break;
 					}
-					//calculate star score rating thing WIP
+					
 					var _starrating = 4;
 					var _todayscustomers = global.todayshappycustomers+global.todaysupsetcustomers;
-					var _danumber;
+					var _danumber = global.todayshappycustomers / global.todaysupsetcustomers;
+					//made up numbers -- matter of fact, made up SYSTEM
+					if (_danumber <= 0.5) {
+						_starrating = 1;
+					}
+					if (_danumber > 0.5) && (_danumber < 1) {
+						_starrating = 2;
+					}
+					if (_danumber > 1) && (_danumber < 3) {
+						_starrating = 3;
+					}
+					if (_danumber >= 3) {
+						_starrating = 4;
+					}
 					obj_reportrating.sprite_index = asset_get_index("spr_reportrating_"+string(_starrating));
 					
 					obj_report.dir = "right";

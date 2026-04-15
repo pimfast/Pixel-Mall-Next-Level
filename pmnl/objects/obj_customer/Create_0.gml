@@ -15,11 +15,11 @@ shopimat = noone;
 substate = "normal"; //normal, upset, shopped
 tutorialmode = false;
 
-//find the first open slot in customer line and mark it filled and keep track that thats this's spot
+//find the first open slot in customer line and mark it filled and keep track that that's this's spot
 addtofirstopenslot(self,global.customerline);
 //line_pos
 
-walksp = 1; //doesn't work if altered
+walksp = 1; //won't work properly if altered; keep it at 1.
 elvsp = obj_elevator01.levelspeed[obj_elevator01.level];
 
 moveable = false;
@@ -40,7 +40,7 @@ if (irandom(5) == 0) {shopstops++;}
 if (irandom(5) == 0) {shopstops++;}
 //global.money = string(shopstops)
 if (class = "vip") {
-	//audio_play_sound(sfx_pixelmall_vip,1,0) sound effect in game alarm event
+	//audio_play_sound(sfx_pixelmall_vip,1,0) sound effect is in obj_game alarm event
 	customertype = string(irandom(2)+1); //number between 1 and 3
 } else {
 	customertype = string(irandom(6)+1); //number between 1 and 7

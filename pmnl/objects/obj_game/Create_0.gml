@@ -13,8 +13,8 @@ time = string(time_hours)+":"+string(time_minutes);
 
 global.shoptions = []; //zk, medical, sports, hnv, buy, w
 global.heldcustomer = noone;
-global.customerline = [noone,noone,noone,noone,noone]; //first position is the most left
-global.checkoutline = [noone,noone,noone,noone]; //first position is the most right
+global.customerline = [noone,noone,noone,noone,noone]; //first position in array is closest to the elevator
+global.checkoutline = [noone,noone,noone,noone]; //first position in array is closest to the counter
 
 //set start stuff
 background_day_alpha = 1;
@@ -23,5 +23,7 @@ startofdaymoney = 0;
 startofdayrating = 0;
 
 //current_day
+
+global.lang = "english";
 
 global.debugmode = false;

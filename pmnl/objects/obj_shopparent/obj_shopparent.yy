@@ -8,8 +8,8 @@
   "name":"obj_shopparent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Mall Parts",
-    "path":"folders/Objects/Mall Parts.yy",
+    "name":"Shops",
+    "path":"folders/Objects/Mall Parts/Shops.yy",
   },
   "parentObjectId":{
     "name":"obj_upgradeableparent",

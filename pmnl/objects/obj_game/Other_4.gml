@@ -2,7 +2,9 @@
 
 if (room == rm_game) {
 	if (global.day == 1) {
+		createmallpartlabels();
 		startday();
+		
 		var _newcustomer = instance_create_layer(room_width+15,463,"Instances",obj_customer);
 		_newcustomer.tutorialmode = true;
 		_newcustomer.shopstops = 2;
@@ -13,7 +15,14 @@ if (room == rm_game) {
 		//don't spawn the first customer that's usually there
 		alarm[0] = -1;
 	} else {
+		createmallpartlabels();
+		loadgame(global.gameUser);
 		startnight();
 		layer_background_alpha(layer_background_get_id(layer_get_id("Background_Day")),0);
 	}
+}
+
+if (room == rm_init) {
+	room_goto(rm_title);
+	exit;
 }

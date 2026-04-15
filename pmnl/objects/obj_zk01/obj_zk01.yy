@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Level 1-10",
-    "path":"folders/Objects/Mall Parts/Level 1-10.yy",
+    "path":"folders/Objects/Mall Parts/Shops/Level 1-10.yy",
   },
   "parentObjectId":{
     "name":"obj_shopparent",

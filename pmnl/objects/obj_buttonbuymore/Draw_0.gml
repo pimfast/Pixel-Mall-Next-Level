@@ -10,8 +10,10 @@ draw_set_color(c_dkgray);
 if (room == rm_title) {
 	if (global.debugmode) {
 		draw_text_transformed(x,y,"Debug\nEnabled",image_xscale,image_yscale,0);
+		sprite_index = spr_button_green;
 	} else {
-		draw_text_transformed(x,y,"Debug\nDisabled",image_xscale,image_yscale,0);
+		//draw_text_transformed(x,y,"Debug\nDisabled",image_xscale,image_yscale,0);
+		sprite_index = noone;
 	}
 } else {
 	if (!upgradewindow.selectedmallpart.levelcurrency[upgradewindow.mallpartlevel+1]) {

@@ -28,9 +28,9 @@ if (attending.serving.shopimat == obj_counter01) {
 
 	if (attending.serving.shopstops <= 0) {
 		attending.serving.substate = "shopped";
-		if (array_contains(global.checkoutline,noone)) {
+		if (global.checkoutline[0] == noone) {
 			attending.serving.state = "goingto_counter";
-			addtofirstopenslot(attending.serving,global.checkoutline);
+			global.checkoutline[0] = attending.serving.id;
 			attending.serving.shopimat = noone;
 			attending.serving = noone;
 		} else {
@@ -55,10 +55,7 @@ if (attending.serving.shopimat == obj_counter01) {
 		
 		attending.serving.desiredstore = array_get(_shoptionsminusthesame,irandom(array_length(_shoptionsminusthesame)-1));
 		attending.serving.customerbubble.sprite_index = asset_get_index("spr_customerbubble_"+string(attending.serving.desiredstore));
-		attending.serving.alarm[0] = 360;
-		if (attending.serving.class == "vip") {
-			attending.serving.alarm[0] = 360/2;
-		}
+		attending.serving.alarm[0] = attending.serving.patienceTime;
 		attending.serving.alarm[1] = -1;
 	}
 	//mark the store as not attended by self

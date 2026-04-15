@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Employees",
-    "path":"folders/Objects/Employees.yy",
+    "path":"folders/Objects/Mall Parts/Employees.yy",
   },
   "parentObjectId":{
     "name":"obj_upgradeableparent",

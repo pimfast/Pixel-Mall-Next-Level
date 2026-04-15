@@ -6,9 +6,12 @@ switch (room) {
 		draw_set_halign(fa_center);
 		draw_set_valign(fa_middle);
 		draw_set_color(c_white);
-		draw_text(253,335,"Play");
-		draw_text(53,359,global.pixelmoney);
-		draw_text(53,401,global.gameUser);
+		
+		if (!instance_exists(obj_button_tutorial)) {
+			draw_text(253,335,"Play");
+			draw_text(53,359,global.pixelmoney);
+			draw_text(53,401,global.gameUser);
+		}
 		
 		break;
 	case rm_game:

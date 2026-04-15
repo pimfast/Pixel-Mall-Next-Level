@@ -9,4 +9,7 @@ if (global.level < 100) {
 	considerlevelup();
 	global.money = _oldmoney;
 	global.rating = _oldrating;
+	
+	//save game for consistency, otherwise only levels where you gain pixelmoney will be saved
+	savegame(global.gameUser);
 }

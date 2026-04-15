@@ -1,5 +1,6 @@
 /// @desc
 
+//createmallpartlabels();
 startnight();
 
 global.day++

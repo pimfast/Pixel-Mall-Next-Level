@@ -13,17 +13,18 @@ global.mode = "game";
 //load the first save file found if it exists, otherwise make a new user
 //var _savefile = (working_directory + "*.sav");
 var _savefile = filename_name(file_find_first("*.sav", 0));
+var _username;
 
 if (file_exists(_savefile)) {
-	var _username = string_delete(filename_name(_savefile),-1,-4)
-	show_debug_message(_username)
+	var _username = string_delete(filename_name(_savefile),-1,-4);
+	show_debug_message(_username);
 	
-	loadgame(_username)
-	global.gameUser = _username;
+	loadgame(_username);
 } else {
-	savegame("Guest");
-	global.gameUser = "Guest";
+	_username = "User";
+	savegame(_username);
 }
+global.gameUser = _username;
 
 //load settings
 var _optionsfile = filename_name(working_directory + "settings.txt");

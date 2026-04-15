@@ -23,7 +23,7 @@ if (global.heldcustomer != noone) {
 				customerstore.serving = global.heldcustomer.id;
 				global.heldcustomer.shopimat = customerstore;
 				
-				global.heldcustomer.alarm[0] = 360;
+				global.heldcustomer.alarm[0] = global.heldcustomer.patienceTime;
 				global.heldcustomer.alarm[1] = -1;
 				global.heldcustomer.sprite_index = asset_get_index("spr_"+global.heldcustomer.class+"_"+global.heldcustomer.customertype+"_talk_"+global.heldcustomer.substate);
 				global.heldcustomer.customerbubble.sprite_index = spr_customerbubble_request;

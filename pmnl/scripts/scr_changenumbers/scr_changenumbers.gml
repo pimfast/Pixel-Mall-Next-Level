@@ -56,46 +56,39 @@ function changepixelmoney(pixelmoneystatement) {
 	}
 }
 
-function mallpartlevelup(tbluMallpart) {
-	//tblu = to be leveled up
-	tbluMallpart.level++;
-	if (tbluMallpart.level == (array_length(tbluMallpart.leveldesc) - 1)) {
-		tbluMallpart.mypurchaseupgradelabel.sprite_index = noone;
-	} else {
-		tbluMallpart.mypurchaseupgradelabel.sprite_index = spr_hko_ip_icon_upgrade;
-	}
+function loadmallpart(mallPart) {
+	//load or reload all relevant stats
 	
-	tbluMallpart.mylevellabel.sprite_index = asset_get_index("spr_label_lvl"+string(tbluMallpart.level));
+	//deal with label stuff
+	setlabels(mallPart);
 	
-	if (object_get_parent(tbluMallpart.object_index) == obj_employeeparent) {
-		tbluMallpart.image_alpha = 1;
-		if (tbluMallpart.level == 1) {
-			tbluMallpart.mypurchaseupgradelabel.starty -= 22;
-			tbluMallpart.mylevellabel.y -= 22
+	if (mallPart.level >= 1) {
+		if (object_get_parent(mallPart.object_index) == obj_employeeparent) {
+			mallPart.image_alpha = 1;
+			
+			mallPart.servicesp = mallPart.levelservicesp[mallPart.level];
+			mallPart.walksp = mallPart.levelwalksp[mallPart.level];
+		} 
+		if (object_get_parent(mallPart.object_index) == obj_shopparent) {
+			mallPart.sprite_index = asset_get_index("spr_store_"+string(mallPart.shopname)+"_lvl"+string(mallPart.level));
+			mallPart.image_alpha = 1;
+	
+			mallPart.servicecharge = mallPart.levelcharge[mallPart.level];
+			mallPart.servicerating = mallPart.levelrating[mallPart.level];
+			mallPart.servicetime = mallPart.leveltime[mallPart.level];
 		}
+		if (object_get_parent(mallPart.object_index) == obj_miscpartparent) {
+			mallPart.sprite_index = asset_get_index("spr_"+string(mallPart.miscpartname)+"_lvl"+string(mallPart.level));
+			mallPart.image_alpha = 1;
+			if (variable_instance_exists(mallPart.id,"myfg")) {
+				mallPart.myfg.sprite_index = asset_get_index("spr_"+string(mallPart.miscpartname)+"_lvl"+string(mallPart.level)+"b");
+				mallPart.myfg.image_alpha = 1;
+			}
 		
-		tbluMallpart.servicesp = tbluMallpart.levelservicesp[tbluMallpart.level];
-		tbluMallpart.walksp = tbluMallpart.levelwalksp[tbluMallpart.level];
-	} 
-	if (object_get_parent(tbluMallpart.object_index) == obj_shopparent) {
-		tbluMallpart.sprite_index = asset_get_index("spr_store_"+string(upgradewindow.selectedmallpart.shopname)+"_lvl"+string(upgradewindow.selectedmallpart.level));
-		tbluMallpart.image_alpha = 1;
-	
-		tbluMallpart.servicecharge = tbluMallpart.levelcharge[tbluMallpart.level];
-		tbluMallpart.servicerating = tbluMallpart.levelrating[tbluMallpart.level];
-		tbluMallpart.servicetime = tbluMallpart.leveltime[tbluMallpart.level];
-	}
-	if (object_get_parent(tbluMallpart.object_index) == obj_miscpartparent) {
-		tbluMallpart.sprite_index = asset_get_index("spr_"+string(upgradewindow.selectedmallpart.miscpartname)+"_lvl"+string(upgradewindow.selectedmallpart.level));
-		tbluMallpart.image_alpha = 1;
-		if (variable_instance_exists(tbluMallpart.id,"myfg")) {
-			tbluMallpart.myfg.sprite_index = asset_get_index("spr_"+string(upgradewindow.selectedmallpart.miscpartname)+"_lvl"+string(upgradewindow.selectedmallpart.level)+"b");
-			tbluMallpart.myfg.image_alpha = 1;
+			mallPart.servicecharge = mallPart.levelcharge[mallPart.level];
+			mallPart.servicerating = mallPart.levelrating[mallPart.level];
+			mallPart.servicetime = mallPart.leveltime[mallPart.level];
 		}
-		
-		tbluMallpart.servicecharge = tbluMallpart.levelcharge[tbluMallpart.level];
-		tbluMallpart.servicerating = tbluMallpart.levelrating[tbluMallpart.level];
-		tbluMallpart.servicetime = tbluMallpart.leveltime[tbluMallpart.level];
 	}
 }
 
@@ -149,7 +142,16 @@ function considerlevelup() {
 				//nothin
 				obj_lobby01.sprite_index = spr_lobby01_lvl10;
 				break;
+			default:
+				//idk. free pixelmoney
+				changepixelmoney(+100)
+				break;
 		}
-	obj_reportbuilding.sprite_index = asset_get_index("spr_reportbuilding_lvl"+string(global.level));
+		var _maxlevel = 10
+		if (global.level <= _maxlevel) {
+			obj_reportbuilding.sprite_index = asset_get_index("spr_reportbuilding_lvl"+string(global.level));
+		} else {
+			obj_reportbuilding.sprite_index = asset_get_index("spr_reportbuilding_lvl"+string(_maxlevel));
+		}
 	}
 }

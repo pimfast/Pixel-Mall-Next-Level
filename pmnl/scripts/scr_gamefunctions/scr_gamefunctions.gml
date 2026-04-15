@@ -31,15 +31,11 @@ function startday() {
 			image_alpha = 1;
 			sprite_index = lvl0sprite;
 		}
-		if (level >= 1) {
+		//it's a shoption if it's at least purchasable (idk if that's how it's supposed to work)
+		if (level >= 0) {
 			if (object_get_name(object_index) != "obj_counter01") {
 				array_push(global.shoptions,string_letters(shopname));
 			}
-			////buying a shop doesn't update nothing, so i put this here to refresh the things every day,
-			////but now i'm thinking it's better to put this in the buy code
-			//servicecharge = levelcharge[level];
-			//servicerating = levelrating[level];
-			//servicetime = leveltime[level];
 		}
 		serving = noone;
 		attended = false;
@@ -68,8 +64,14 @@ function startday() {
 	
 	obj_counter01.mask_index = spr_store_counter01_lvl1;
 	
-	instance_destroy(obj_purchaseupgradelabel);
-	instance_destroy(obj_levellabel);
+	//instance_destroy(obj_purchaseupgradelabel);
+	with (obj_purchaseupgradelabel) {
+		visible = false;
+	}
+	//instance_destroy(obj_levellabel);
+	with (obj_levellabel) {
+		visible = false;
+	}
 	instance_destroy(obj_button_startday);
 	obj_game.background_day_alpha = 1;
 	obj_button_pause.sprite_index = spr_button_pause;
@@ -80,7 +82,6 @@ function startday() {
 }
 
 function startnight() {
-	
 	audio_group_stop_all(ag_mus);
 	audio_play_sound(mus_pixelmall_upgrade,100,1);
 	obj_game.time = "End"
@@ -127,35 +128,67 @@ function startnight() {
 		}
 	}
 	with (obj_upgradeableparent) {
-		if (level >= 0) {
-			mypurchaseupgradelabel = instance_create_depth(x+labelX,y+labelY,0,obj_purchaseupgradelabel);
-			mylevellabel = instance_create_depth(x+labelX,y+labelY+20,0,obj_levellabel);
-			mylevellabel.dir = "";
-			if (level == 0) {
-				mypurchaseupgradelabel.sprite_index = spr_hko_ip_icon_purchase;
-				mylevellabel.sprite_index = noone;
-			}
-			if (level >= 1) {
-				if (level < (array_length(leveldesc) - 1)) {
-					mypurchaseupgradelabel.sprite_index = spr_hko_ip_icon_upgrade;
-				} else {
-					mypurchaseupgradelabel.sprite_index = noone;
-				}
-				mylevellabel.sprite_index = asset_get_index("spr_label_lvl"+string(level));
-				if (object_get_parent(object_index) == obj_employeeparent) {
-					mypurchaseupgradelabel.starty = y+labelY-22;
-					mylevellabel.y = y+labelY-2;
-				}
-			}
-		}
+		setlabels(id);
 	}
 	
 	obj_counter01.mask_index = spr_store_counter_upgrademask;
+	
+	//set all labels to visible (ones that shouldn't be already have their sprite set to noone)
+	with (obj_purchaseupgradelabel) {
+		visible = true;
+	}
+	with (obj_levellabel) {
+		visible = true;
+	}
 	
 	instance_create_layer(room_width/2,room_height-64,"Instances",obj_button_startday);
 	obj_game.background_day_alpha = 0;
 	obj_button_pause.sprite_index = spr_button_back;
 	global.mode = "upgrade";
+}
+
+function createmallpartlabels() {
+	with (obj_upgradeableparent) {
+		mypurchaseupgradelabel = instance_create_depth(x+labelX,y+labelY,0,obj_purchaseupgradelabel);
+		mylevellabel = instance_create_depth(x+labelX,y+labelY+20,0,obj_levellabel);
+		mylevellabel.dir = "";
+	}
+}
+
+function setlabels(mallPart) {
+	with (mallPart) {
+		//deal with label stuff
+		if (level <= -1) {
+			mypurchaseupgradelabel.sprite_index = noone;
+			mylevellabel.sprite_index = noone;
+		}
+		if (level == 0) {
+			mypurchaseupgradelabel.sprite_index = spr_hko_ip_icon_purchase;
+			mylevellabel.sprite_index = noone;
+		}
+		if (level >= 1) {
+			//make purchase/upgrade label invisible if the mall part is at max level,
+			//if it's not at max level make it an upgrade label
+			if (level == (array_length(leveldesc) - 1)) {
+				mypurchaseupgradelabel.sprite_index = noone;
+			} else {
+				mypurchaseupgradelabel.sprite_index = spr_hko_ip_icon_upgrade;
+			}
+		
+			//set the level label to the right sprite
+			mylevellabel.sprite_index = asset_get_index("spr_label_lvl"+string(level));
+			
+			//adjust the height for the employee labels
+			if (object_get_parent(object_index) == obj_employeeparent) {
+				mypurchaseupgradelabel.starty = y+labelY-22;
+				mylevellabel.y = y+labelY-2;
+			}
+			//if (mallPart.level == 1) {
+			//	mallPart.mypurchaseupgradelabel.starty -= 22;
+			//	mallPart.mylevellabel.y -= 22;
+			//}
+		}
+	}
 }
 
 function findclosestemployee(pointx,pointy,object,n) {
@@ -216,6 +249,7 @@ function loadgame(_username) {
 	global.day = file_text_read_real(_savefile);
 	with (obj_upgradeableparent) {
 		level = file_text_read_real(_savefile);
+		loadmallpart(id);
 		file_text_readln(_savefile);
 	}
 	file_text_close(_savefile);

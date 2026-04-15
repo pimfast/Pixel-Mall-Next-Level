@@ -1,7 +1,8 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function loadlanguage(){
-english = [
+function loadlanguage(lang){
+if (lang == "english") 
+return [
 "Taking care of your customers is easy: all you have to do is drag them to the appropriate shop.",
 "Once placed in one of the shops, tap the customer to begin serving them.",
 "Don't let your customers stay unattended for too long or they will become angry and leave!",
@@ -14,4 +15,5 @@ english = [
 "This is your shop level. Tapping this will display the day's earnings and changes to the happiness meter. It will also show you the requirements for the next level.",
 "If you play long enough and do a good job of making your customers happy, a special guest might visit your mall to shop there. Good luck! "
 ];
+
 }

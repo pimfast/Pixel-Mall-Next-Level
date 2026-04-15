@@ -17,7 +17,7 @@ if (_button == noone) {
 		//check for customers
 		var _customer = instance_position(mouse_x,mouse_y,obj_customer);
 		if (_customer != noone) && (_customer.moveable == true) {
-			//run customer script
+			//hold customer
 			audio_play_sound(sfx_pixelmall_dragStart,1,0);
 			global.heldcustomer = _customer.id;
 			_customer.beingmoved = true;
@@ -92,7 +92,7 @@ if (_button == noone) {
 				//check for other mall items
 				var _misc = instance_position(mouse_x,mouse_y,obj_miscpartparent);
 				if (_misc != noone) {
-					
+					//...um, it's just not clickable? i don't even why this is here
 				}
 			}
 		}
